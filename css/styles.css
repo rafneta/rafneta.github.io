@@ -44,7 +44,7 @@ hr {
 }
 
 .title-super {
-	font-size: 50px;
+	font-size: 60px;
 }
 
 .title-super2{
@@ -64,12 +64,12 @@ hr {
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 600px) and (max-width: 1200px) {
   .title-super {
     font-size: 30px;
   }
   .title-super2{
-	font-size: 15px;
+	font-size: 10px;
 
 }
 
