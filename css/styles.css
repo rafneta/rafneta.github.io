@@ -1,0 +1,86 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -box-sizing: border-box;
+/*    outline: 1px solid red;
+*/    
+    
+	
+ 
+	
+}
+
+
+
+body {
+	font-family: "Lato", sans-serif;
+	color: #003;
+	font-weight: 400;
+
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
+}
+
+
+.logo {
+  width: 20%;
+  float: left;
+}
+
+.text-muted1 {
+	color: #bcb;
+}
+
+.text-thin {
+	font-weight: 100;
+}
+
+.title-super {
+	font-size: 50px;
+}
+
+.title-super2{
+	font-size: 20px;
+
+}
+
+.title-logo {
+	margin-top: 1em;
+}
+
+.vertical-space{
+	margin-bottom: 1.5em;
+	margin-top: 1.5em;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .title-super {
+    font-size: 30px;
+  }
+  .title-super2{
+	font-size: 15px;
+
+}
+
+@media screen (max-width: 600px)  {
+  .title-super {
+    font-size: 8px;
+  }
+  .title-super2{
+	font-size: 4px;
+
+}
+
+
+}
