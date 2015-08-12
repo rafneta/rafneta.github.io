@@ -2,7 +2,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -box-sizing: border-box;
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     
     
 	
@@ -43,13 +43,12 @@ hr {
   display: flex;
   
   -webkit-flex-flow: row wrap;
-/*  justify-content: space-around;
-*/}
+ justify-content: space-around;
+}
 
 .logo {
   width: 50%;
-/*  float: left;
-*/}
+  float: left;}
 
 .permanen{
 
