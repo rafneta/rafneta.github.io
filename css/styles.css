@@ -69,17 +69,17 @@ hr {
   }
   .title-super2{
   font-size: 8px;
-
+  }
 }
 
 
 @media screen and (min-width: 401px) {
-  .title-super {
+  .title-super{
     font-size: 30px;
   }
   .title-super2{
 	font-size: 10px;
-
+  }
 }
 
 
