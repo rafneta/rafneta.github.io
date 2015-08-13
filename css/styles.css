@@ -90,14 +90,14 @@ img{
 
 @media screen and (max-width: 350px)  {
   .title-super {
-    font-size: 15px;
+    font-size: 12px;
   }
   .title-super2{
-  font-size: 5px;
+  font-size: 7px;
   }
 }
 
-@media screen and (max-width: 500px) and (min-width: 351px) {
+@media screen and (max-width: 400px) and (min-width: 351px) {
   .title-super{
     font-size: 20px;
   }
@@ -106,7 +106,7 @@ img{
   }
 }
 
-@media screen and (max-width: 1200px) and (min-width: 501px) {
+@media screen and (max-width: 1200px) and (min-width: 401px) {
   .title-super{
     font-size: 30px;
   }
