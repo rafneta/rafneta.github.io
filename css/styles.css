@@ -29,6 +29,10 @@ hr {
     border-width: 3px;
 }
 
+img{
+
+  max-width: 100%;
+}
 
 
 .flex-container {
