@@ -31,7 +31,8 @@ hr {
 
 img{
 
-  max-width: 100%;
+  width: 100vmax;
+  min-height: 100vmax;
 }
 
 
@@ -52,7 +53,8 @@ img{
 }
 
 .logo {
-  width: 100%;
+  width: 100vmax;
+  min-height: 100vmax;
   float: left;}
 
 .permanen{
