@@ -1,56 +1,31 @@
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -box-sizing: border-box;
-    /*outline: 1px solid red;*/
-    
-    
-	
- 
-	
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -box-sizing: border-box;
 }
-
-
 
 body {
 	font-family: "Lato", sans-serif;
 	color: #003;
 	font-weight: 400;
-
 }
 
-hr { 
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 3px;
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 3px;
 }
-
-
-
 
 .flex-container {
- /* padding: 0;
-  margin: 0;
-  list-style: none;
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;*/
   display: flex;
   flex-wrap: wrap;
-  
-  /*-webkit-flex-flow: row wrap;
- justify-content: space-around;*/
 }
 
-
 .permanen{
-
   display: flex;
 }
 
@@ -68,50 +43,42 @@ hr {
 
 .title-super2{
 	font-size: 20px;
-
 }
 
 .title-logo {
 	margin-top: 1em;
 }
 
-.vertical-space{
+.vertical-space {
 	margin-bottom: 1.5em;
 	margin-top: 1.5em;
 }
 
-
-
-@media screen and (max-width: 350px)  {
+@media screen and (max-width: 350px) {
   .title-super {
     font-size: 12px;
   }
-  .title-super2{
-  font-size: 7px;
+  .title-super2 {
+    font-size: 7px;
   }
 }
 
 @media screen and (max-width: 400px) and (min-width: 351px) {
-  .title-super{
+  .title-super {
     font-size: 20px;
   }
-  .title-super2{
-	font-size: 8px;
+
+  .title-super2 {
+	 font-size: 8px;
   }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 401px) {
-  .title-super{
+  .title-super {
     font-size: 30px;
   }
-  .title-super2{
-	font-size: 10px;
+
+  .title-super2 {
+    font-size: 10px;
   }
 }
-
-
-
-
-
-
-
