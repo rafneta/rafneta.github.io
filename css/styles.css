@@ -29,11 +29,7 @@ hr {
     border-width: 3px;
 }
 
-img{
 
-  max-width: 100%;
-  
-}
 
 
 .flex-container {
@@ -52,9 +48,6 @@ img{
  justify-content: space-around;*/
 }
 
-.logo {
-  max-width: 100%;
-}
 
 .permanen{
 
