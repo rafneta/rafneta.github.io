@@ -5,9 +5,8 @@
 }
 
 body {
-	font-family: "Lato", sans-serif;
+	font: 400 1em "Lato", sans-serif;
 	color: #003;
-	font-weight: 400;
 }
 
 hr {
@@ -53,7 +52,7 @@ hr {
 	.title-super {
 	font-size: 12px;
 	}
-	
+
 	.title-super2 {
 	font-size: 7px;
 	}
