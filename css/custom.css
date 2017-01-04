@@ -526,7 +526,7 @@ height: 100%;
     left: 0;
    background-color:  rgba(54, 98, 114, 0.9);
     /*overflow-x: hidden;*/
-	overflow:visible;
+	overflow:scroll;
     transition: 0.5s;
 }
 
@@ -536,7 +536,7 @@ height: 100%;
     width: 100%;
     text-align: center;
  color:white;
- margin-top: 70px;
+ margin-top: 30px;
 
 }
 
@@ -555,8 +555,8 @@ height: 100%;
 
 .closebtn {
     position: absolute;
-    top: 40px;
-    right: 95px;
+    top: 20px;
+    left: 45px;
     font-size: 60px !important;
 }
 
@@ -570,4 +570,3 @@ height: 100%;
     right: 35px;
   }
   
-
