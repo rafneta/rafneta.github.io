@@ -526,17 +526,17 @@ height: 100%;
     left: 0;
    background-color:  rgba(54, 98, 114, 0.9);
     /*overflow-x: hidden;*/
-	overflow:scroll;
+	overflow:visible;
     transition: 0.5s;
 }
 
 .overlay-content {
-      position: absolute;
+      position: relative;
     top: 10%;
     width: 100%;
     text-align: center;
  color:white;
- margin-top: 30px;
+ margin-top: 50px;
 
 }
 
