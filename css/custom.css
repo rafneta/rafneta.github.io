@@ -555,8 +555,8 @@ height: 100%;
 
 .closebtn {
     position: absolute;
-    top: 20px;
-    left: 45px;
+    top: 40px;
+    right: 95px;
     font-size: 60px !important;
 }
 
