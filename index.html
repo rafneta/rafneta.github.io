@@ -8,6 +8,7 @@
 		<meta name="description" content="Fullscreen Pageflip Layout with BookBlock" />
 		<meta name="keywords" content="fullscreen pageflip, booklet, layout, bookblock, jquery plugin, flipboard layout, sidebar menu" />
 		<meta name="author" content="Codrops" />
+        <link href="css/bootstrap.css" rel="stylesheet">
 		<link rel="shortcut icon" href="../favicon.ico"> 
 		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
 		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
@@ -47,6 +48,8 @@ MathJax.Hub.Config({
 					<div class="bb-item" id="item1">
 						<div class="content">
 							<div class="scroller">
+                                
+                                
 								<h2>Transformada de Fourier</h2>
 							\begin{equation}
   \mathscr{F}\left\{ f(t)  \right\}=\int _{ -\infty  }^{ \infty  }{ f(t) } { e }^{ -j\omega t }dt
@@ -63,6 +66,141 @@ MathJax.Hub.Config({
                                 \begin{equation}
   \mathscr{F}\left\{ f(t)  \right\}=\int _{ -\infty  }^{ \infty  }{ f(t) } { e }^{ -j\omega t }dt
   \end{equation}<p>contenido</p>
+                                
+<!--/INICIO primer COLUMNA-->
+<div class="col-sm-6 justo">
+    
+<p>Se define a la transformada de Fourier de una función \(f(t)\) como</p>
+    <div class="row">
+<div id="ecuacion" class=" col-sm-offset-1 col-sm-10 col-sm-offset-1">
+            \begin{equation}
+  \mathscr{F}\left\{ f(t)  \right\}=\int _{ -\infty  }^{ \infty  }{ f(t) } { e }^{ -j\omega t }dt
+  \label{defFou}\end{equation}
+</div>
+        </div>
+   <p class="justo">siempre y cuando esta integral converja.</p>
+
+   <div class="col-sm-8 ">
+   <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dIkGVtuKUmE?start=23" allowfullscreen></iframe>
+  </div>
+</div> <p class="justo">Obsérvese que en esta integral
+ desaparece la letra de integración (cuando se termina de integrar),
+ en este caso la \(t\), por lo que este procedimiento da lugar a una nueva expresión
+en términos de una nueva variable \(\omega\), y dependiendo de la literatura que
+se consulte se define la siguiente notación:</p>
+    <div class="row">
+<div id="ecuacion" class="col-sm-offset-1 col-sm-10 col-sm-offset-1">
+\begin{equation}
+\mathscr{F}\left\{ f(t)  \right\}=F(j\omega)=F(\omega)
+\end{equation}
+    </div>
+    </div>
+    <div class="row sepa"></div>
+<div class="col-sm-8 ">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/T-sxVneUQwk?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+            <p class="justo">
+  Se utilizará cualquiera de estas notaciones de manera indistinta.
+  La transformada de Fourier es un tipo de operación que en general se conoce como
+        transformada integral            </p>
+<p class="justo">  Los sisjnvj Los siguientes ejemplos ayudan a entender como encontrar la transformada de Fourier  por medio de la definición, son cálculos directos, es decir, son técnicas de integración usual (recuerde que \(j\) se opera como una constante), probablemente lo "complicado" es evaluar los límites de integración, si no se recuerda como realizar estas evaluaciones es muy recomendable que se revise el siguiente <a href="https://www.youtube.com/watch?v=_Cyt4V0G5DU" target="_blank">
+        enlace</a> antes de continuar, con el fin de que los procedimientos presentados sean transparentes, aunque puede avanzar sin ningún problema. 
+</p>
+</div><!--/col-md-6-->
+<!--FIN PRIMER COLUMNA--> 
+<!--/INICIO SEGUNDA COLUMNA-->          
+        <div class="col-sm-6" >
+            
+<!--/EJEMPLO-E1 vista--> 
+            <div class="row">
+        <div id="ejemplo" class="col-sm-offset-1 col-sm-10 col-sm-offset-1">
+      <p class="justo">
+        <br>
+          <strong>Ejemplo 1:<br>
+          </strong>  Encuentre la transformada de Fourier de \(f(t)={ e }^{ -at }u(t)\)</p>
+          <br>
+          <div class="row">
+          <div class="col-sm-offset-2 col-sm-4 center-block ">
+              <button  class=" dmbutton "  data-toggle="modal" data-target="#ModalE1">
+                Solución</button>
+          </div>
+          <br>
+        </div>
+      </div>
+                </div>
+  <!--- /////////////////////////////-->      
+    <div class="row sepa"></div>              
+<!--/EJEMPLO-E2 vista-->
+            <div class="row">
+          <div id="ejemplo" class="col-sm-offset-1 col-sm-10 col-sm-offset-1">
+      <p class="justo">
+        <br>
+          <strong>Ejemplo 2:<br>
+          </strong>  Encuentre la transformada de Fourier de \(f(t)=t{ e }^{ -at }u(t)\)</p>
+          <br>
+          <div class="row">
+          <div class="col-sm-offset-2 col-sm-4 center-block ">
+              <button type="button" class="dmbutton" data-toggle="modal" data-target="#ModalE2">
+                Solución</button>
+          </div>
+          <br>
+        </div>
+      </div>
+                </div>
+ <!--- /////////////////////////////-->   
+            
+           <div class="row sepa"></div>
+<!--/EJEMPLO-E3 vista-->
+            <div class="row">
+  <div id="ejemplo" class="col-sm-offset-1 col-sm-10 col-sm-offset-1">
+<p class="justo">
+<br>
+  <strong>Ejemplo 3:<br>
+  </strong>  Encuentre la transformada de Fourier de \(f(t)={ e }^{ -a|t| }\)</p>
+  <br>
+      
+  <div class="row">
+  <div class="col-sm-offset-2 col-sm-4 center-block ">
+      <button type="button" class="dmbutton" data-toggle="modal" data-target="#ModalE3">
+        Solución</button>
+  </div>
+  <br>
+</div>
+</div>
+            </div>
+            
+
+        <p class="justo">Los ejemplos anteriores pueden ser resueltos usando diferentes paquetes de computo, en particular se han implementado lso códigos en Python y Matlab, que puedes consultar.  
+        </p>
+<!--- /////////////////////////////-->      
+<div class="row col-sm-12">
+          <div class=" col-sm-3 col-sm-offset-1 center-block1 ">
+              <button type="button" class="dmbutton" data-toggle="modal" data-target="#Modalpython1">
+                Python</button>
+          </div>
+    <div class=" col-sm-offset-1 col-sm-3  center-block1 ">
+              <button type="button" class="dmbutton" data-toggle="modal" data-target="#Modalmatlab1">
+                Matlab</button>
+          </div>
+          
+</div>
+  
+
+     
+         
+<!--Intento de grafica con graph.tk-->
+<!--<div class="row">
+    <iframe src="http://graph.tk/" id="my_graph"></iframe>
+        </div>-->
+            
+
+</div>             
+<!--FIN SEGUNDA COLUMNA-->
+                                
+                                
 							</div>
 						</div>
 					</div>
