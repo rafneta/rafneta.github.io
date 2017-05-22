@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Pr&aacute;ctica 5: Convoluci&oacute;n y Correlaci&oacute;n de se&ntilde;ales en tiempo continuo y discreto</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-15"><meta name="DC.source" content="Prac5ASySMayo2017.m"><style type="text/css">
+      --><title>Pr&aacute;ctica 5: Convoluci&oacute;n y Correlaci&oacute;n de se&ntilde;ales en tiempo continuo y discreto</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-22"><meta name="DC.source" content="Prac5ASySMayo2017.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -177,7 +177,7 @@ f=inline(<span class="string">'n&gt;=0 &amp; n&lt;=4'</span>,<span class="string
 ng=3:7;
 g=inline(<span class="string">'n&gt;=3 &amp; n&lt;=7'</span>,<span class="string">'n'</span>);
 convdisc( [nf;f(nf)], [ng;g(ng)] )
-</pre><img vspace="5" hspace="5" src="Prac5ASySMayo2017_05.png" alt=""> <h2>Entregables<a name="18"></a></h2><p>Se revisa una publicaci&oacute;n (html) de la pr&aacute;ctica</p><div><ol><li>(25 puntos) Realiza la convoluci&oacute;n n&uacute;merica indicada en el ejercicio 1 del siguiente enlace, <a href="https://www.dropbox.com/s/72emqjn3zetbt4z/PR06SySMar2017.pdf?dl=0">enlace</a> compara con el resultado analitico de este PR.</li></ol></div><div><ol><li>(25 puntos) Realiza la correlaci&oacute;n <img src="Prac5ASySMayo2017_eq15597544979900719228.png" alt="$r_{fg}$"> n&uacute;merica de las se&ntilde;ales del ejercicio 1 del siguiente, <a href="https://www.dropbox.com/s/czv0bgp4u4su84t/Unidad1marzo2012RAFAELMTZ.pdf?dl=0">enlace</a></li></ol></div><div><ol><li>(25 puntos) Realiza la convoluci&oacute;n n&uacute;merica de las se&ntilde;ales en tiempo discreto de la evaluciac&oacute;n EE02</li></ol></div><div><ol><li>(25 puntos) Realiza la correlaci&oacute;n n&uacute;merica de las se&ntilde;ales en tiempo discreto de la evaluciac&oacute;n EE02</li></ol></div><p>El c&oacute;digo de esta publicaci&oacute;n lo puedes encontrar en el siguiente <a href="https://www.dropbox.com/s/8msmuplgqn5m67q/Prac5ASySMayo2017.m?dl=0">enlace</a></p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016a</a><br></p></div><!--
+</pre><img vspace="5" hspace="5" src="Prac5ASySMayo2017_05.png" alt=""> <h2>Entregables<a name="18"></a></h2><p>Se revisa una publicaci&oacute;n (html) de la pr&aacute;ctica</p><div><ol><li>(25 puntos) Realiza la convoluci&oacute;n n&uacute;merica indicada en el ejercicio 1 del siguiente enlace, <a href="https://www.dropbox.com/s/oxtcimng4mxpuq1/examenunidad1RAFAELMTZ.pdf?dl=0">enlace</a> compara con el resultado analitico de este PR.</li></ol></div><div><ol><li>(25 puntos) Realiza la correlaci&oacute;n <img src="Prac5ASySMayo2017_eq15597544979900719228.png" alt="$r_{fg}$"> n&uacute;merica de las se&ntilde;ales del ejercicio 1 del siguiente, <a href="https://www.dropbox.com/s/czv0bgp4u4su84t/Unidad1marzo2012RAFAELMTZ.pdf?dl=0">enlace</a></li></ol></div><div><ol><li>(25 puntos) Realiza la convoluci&oacute;n n&uacute;merica de las se&ntilde;ales en tiempo discreto de la evaluciac&oacute;n EE02</li></ol></div><div><ol><li>(25 puntos) Realiza la correlaci&oacute;n n&uacute;merica de las se&ntilde;ales en tiempo discreto de la evaluciac&oacute;n EE02</li></ol></div><p>El c&oacute;digo de esta publicaci&oacute;n lo puedes encontrar en el siguiente <a href="https://www.dropbox.com/s/8msmuplgqn5m67q/Prac5ASySMayo2017.m?dl=0">enlace</a></p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Práctica 5: Convolución y Correlación de señales en tiempo continuo y discreto
 %
@@ -402,7 +402,7 @@ convdisc( [nf;f(nf)], [ng;g(ng)] )
 %  
 % # (25 puntos) Realiza la convolución númerica indicada en el  
 % ejercicio 1 del siguiente enlace, 
-% <https://www.dropbox.com/s/72emqjn3zetbt4z/PR06SySMar2017.pdf?dl=0 enlace>
+% <https://www.dropbox.com/s/oxtcimng4mxpuq1/examenunidad1RAFAELMTZ.pdf?dl=0 enlace>
 % compara con el resultado analitico de este PR.
 %
 % # (25 puntos) Realiza la correlación $r_{fg}$ númerica de las señales   
