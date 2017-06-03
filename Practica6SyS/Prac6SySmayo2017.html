@@ -75,11 +75,10 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 <span class="comment">% declarada en el command window</span>
 <span class="comment">% t0 tiempo final para graficar la solucion, la derivada, y la segunda </span>
 <span class="comment">% derivada </span>
-<span class="comment">% ejemplo: resolver y^(2)+2y^(1)+2y=x^(1)+2x con y^(2)(0)=0</span>
-<span class="comment">% y^(1)=0</span>
-<span class="comment">% y(0)=0, x(0)=0 x^(1)=0, x(t)=exp(-t)u(t), para 5 segundos, se resuleve como</span>
+<span class="comment">% ejemplo: resolver y^(2)+2y^(1)+2y=x^(1)+2x con y^(1)(0)=0</span>
+<span class="comment">% y(0)=0, x(0)=0, x(t)=exp(-t)u(t), para 5 segundos, se resuleve como</span>
 <span class="comment">% syms t</span>
-<span class="comment">% fourier2016a([2 2 1],[2 1],exp(-t)*heaside(t),2)</span>
+<span class="comment">% fourier2016a([2 2 1],[2 1],exp(-t)*heaviside(t),2)</span>
 close <span class="string">all</span>
 tam=size(a);
 tami=size(b);
