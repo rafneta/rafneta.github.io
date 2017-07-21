@@ -1,35 +1,3 @@
-function Stc1o() {
-    document.getElementById("stc1").style.width = "100%";
-}
-
-function Stc1c() {
-    document.getElementById("stc1").style.width = "0%";
-}
-function Stc2o() {
-    document.getElementById("stc2").style.width = "100%";
-}
-
-function Stc2c() {
-    document.getElementById("stc2").style.width = "0%";
-}
-function Stc3o() {
-    document.getElementById("stc3").style.width = "100%";
-}
-
-function Stc3c() {
-    document.getElementById("stc3").style.width = "0%";
-}
-function Stc4o() {
-    document.getElementById("stc4").style.width = "100%";
-}
-
-function Stc4c() {
-    document.getElementById("stc4").style.width = "0%";
-}
-
-
-
-
 function Fou1o() {
     document.getElementById("fou1").style.width = "100%";
 }

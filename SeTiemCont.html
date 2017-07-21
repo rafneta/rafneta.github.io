@@ -1,0 +1,211 @@
+<p>Para una señal $f:A\rightarrow B$ en tiempo continuo donde $B\subset\mathbb{R}$ decimos que la señal es real. Si $B\subset\mathbb{C}$ decimos que la señal es compleja. </p>
+                                
+                                <p>Para la señal real $f(t)=t^3$ se muestra su gráfica</p>
+                                
+                                <div><img src="imagenes/real2d_4.png"></div>
+                                <pre><code class="matlab"> 
+%MATLAB
+%Puedes ejecutar online al final de esta página,
+%solo las tres primeras lineas
+% Y puedes copiar todo si ejecutas MATLAB 
+t=-100:0.1:100;
+plot(t,t.^3,'LineWidth',2)
+grid on
+ax = gca;
+ax.XAxisLocation = 'origin';
+ax.YAxisLocation = 'origin';
+ax.Box = 'off';
+title('Gráfica de la señal f(t)=t^3 ')
+
+                                </code></pre>
+                                <p>Para la señal compleja $f(t)=t^2+tj$ se muestra su rango y su gráfica respectivamente </p>
+                                
+                                <div><img src="imagenes/compleja2d_3.png"></div>
+                                <pre><code class="matlab">
+%MATLAB
+%Puedes ejecutar online al final de esta página,
+%solo las tres primeras lineas
+% Y puedes copiar todo si ejecutas MATLAB
+t=-100:0.1:100;
+plot(t.^2,t,'LineWidth',2)
+grid on
+ax = gca;
+ax.XAxisLocation = 'origin';
+ax.YAxisLocation = 'origin';
+ax.Box = 'off';
+axis([-3000,10000,-100,100])
+xlabel('Re')
+ylabel('Im')
+title('Rango de la señal f(t)=t^2+tj ')
+
+                                </code></pre>
+                                <div><img src="imagenes/compleja3d_4.png"></div>
+                                <pre><code class="matlab"> 
+%MATLAB
+%Puedes ejecutar online al final de esta página,
+%solo las tres primeras lineas
+% Y puedes copiar todo si ejecutas MATLAB 
+t=-100:0.1:100;
+plot3(t,t.^2,t,'LineWidth',2)
+grid on
+xlabel('Dominio t')
+ylabel('Re')
+zlabel('Im')
+title('Gráfica de la señal f(t)=t^2+tj ')
+
+                                </code></pre>
+                                <p>Con una substitución directa en los códigos anteriores se puede resolver el siguiente ejemplo.</p>
+                                  <div class="ejemplo">
+<div id="derecha">
+      <p>    <strong>Ejemplo 1.</strong><br></p></div>
+                                      <p>
+            Realice las gráficas de las siguientes señales complejas, así como el rango.
+                                            </p>                                    
+<ul>
+<li>$f(t)=e^{tj}$</li>
+<li>$f(t)=e^{0.1tj}$</li>
+<li>$f(t)=e^{5tj}$</li>
+</ul>
+<div id="stc1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Stc1c()">×</a>
+  <div class="overlay-content">
+</div>
+</div>
+			
+<button class="dmbutton" onclick="Stc1o()">Solución</button>
+</div>          
+                                
+
+                                <p>Una señal en tiempo continuo $f$ es causal si $f(t)=0$ para todo $t$ menor que cero, en caso contrario decimos que es no causal. Se muestran gráficas de señales causales y de señales no causales.</p>
+                                
+                                <p>La siguiente clasificación de las señales que presentaremos tiene que ver con la idea de "medir a la señal", es decir, dada una señal le realizamos una operación que de resultado nos regrese  un número mayor o igual a cero. </p>
+                                
+                                <p>Para una señal $f$ definimos su energía  $E_f$ como</p>
+                                
+                                $$E_f=\lim_{T\to \infty}\int_{-T}^{T} ||f(t)||^2dt=\int_{-\infty}^\infty ||f(t)||^2dt$$
+                                
+                                <p>Si $0\leq E_f<\infty$ decimos que la señal es de energía, si $E_f\to\infty$ decimos que la señal no es de energía. Es importante hacer notar que $||f(t)||^2$ se refiere a la norma de la señal al cuadrado, cuando la señal sea real entonces.</p>
+                                    
+                                $$||f(t)||^2=\left(f(t)\right)^2$$
+                                    
+                                <p>Cuando la señal sea compleja</p>
+                                
+                                $$||f(t)||^2=\mathbb{R}e(f(t))^2+\mathbb{I}m(f(t))^2$$
+                                
+                                <p>Para una señal $f$ definimos su potencia  $P_f$ como</p>
+                                
+                                $$P_f=\lim_{T\to \infty}\dfrac{1}{T}\int_{-T/2}^{T/2} ||f(t)||^2dt$$
+                                
+                                <p>Si $0< P_f<\infty$ decimos que la señal es de potencia, si $P_f\to\infty$ decimos que la señal no es de potencia. Es importante hacer notar que $||f(t)||^2$ se refiere a la norma de la señal al cuadrado. Una señal puede ser de energía  o de potencia  o de ninguno de estos tipos. Las señales que son de energía tienen potencia 0 es por esto que una señal es de  potencia cuando el cálculo es positivo.   </p>
+                                  <div class="ejemplo">
+<div id="derecha">
+      <p>    <strong>Ejemplo.</strong><br></p></div>
+<p>
+            Clasifique la siguiente señal como de energía, potencia o ninguna de estas
+$$f(t)=e^{tj}$$
+ 
+</p>
+
+
+
+<div id="stc2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Stc2c()">×</a>
+  <div class="overlay-content">
+   
+  
+<p>Sabemos que $f(t)=e^{tj}=cos(t)+sen(t)j$, en este caso</p>
+
+$$\|f(t)\|^2=cos(t)^2+sen(t)^2=1$$
+
+<p>Entonces la energía se calcula como</p>
+
+$$E_f=\int_{-\infty}^{\infty}\|f(t)\|^2dt=\int_{-\infty}^{\infty}dt=\left.t\right|_{-\infty}^{\infty}\to \infty$$
+
+<p>Así, esta señal no es de energía. No podemos concluir que sea una señal de potencia, es necesario realizar la operación correspondiente, en este caso aprovechando las operaciones realizadas previamente</p>
+
+$$P_f=\lim_{T\to\infty}\frac{1}{T}\int_{-T/2}^{T/2}\|f(t)\|^2dt=\lim_{T\to\infty}\frac{1}{T}\int_{-T/2}^{T/2}dt=\frac{1}{T}\lim_{T\to\infty}\left.t\right|_{-T/2}^{T/2}=\lim_{T\to\infty}\frac{1}{T} T=1$$
+
+<p>Así la señal es de potencia.</p>
+
+
+</div>
+</div>
+			
+<button class="dmbutton" onclick="Stc2o()">Solución</button>
+</div>          
+                                  <div class="ejemplo">
+<div id="derecha">
+      <p>    <strong>Ejemplo.</strong><br></p></div>
+<p>
+            Clasifique la siguiente señal como de energía, potencia o ninguna de estas
+$$f(t)=t$$
+ 
+</p>
+
+
+
+<div id="stc3" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Stc3c()">×</a>
+  <div class="overlay-content">
+   
+  
+<p>Sabemos que $f(t)=t$, en este caso</p>
+
+$$\|f(t)\|^2=t^2$$
+
+<p>Entonces la energía se calcula como</p>
+
+$$E_f=\int_{-\infty}^{\infty}\|f(t)\|^2dt=\int_{-\infty}^{\infty}t^2dt=\left.\frac{t^3}{3}\right|_{-\infty}^{\infty}\to \infty$$
+
+<p>Así, esta señal no es de energía. No podemos concluir que sea una señal de potencia, es necesario realizar la operación correspondiente, en este caso aprovechando las operaciones realizadas previamente</p>
+
+$$P_f=\lim_{T\to\infty}\frac{1}{T}\int_{-T/2}^{T/2}\|f(t)\|^2dt=\lim_{T\to\infty}\frac{1}{T}\int_{-T/2}^{T/2}t^2dt=\frac{1}{T}\lim_{T\to\infty}\left.\frac{t^3}{3}\right|_{-T/2}^{T/2}=\lim_{T\to\infty}\frac{1}{T} \frac{T^3}{12}= \lim_{T\to\infty}\frac{T^2}{12}\to\infty$$
+
+<p>Así la señal no es de potencia.</p>
+
+
+</div>
+</div>
+			
+<button class="dmbutton" onclick="Stc3o()">Solución</button>
+</div>          
+                                  <div class="ejemplo">
+<div id="derecha">
+      <p>    <strong>Ejemplo.</strong><br></p></div>
+<p>
+            Clasifique la siguiente señal como de energía, potencia o ninguna de estas
+$$f(t)=\begin{cases}
+e^{-3t}&\mbox{si }0\leq t\\
+0&\mbox{en otro caso}
+\end{cases}$$
+</p>
+
+
+
+<div id="stc4" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Stc4c()">×</a>
+  <div class="overlay-content">
+   
+  
+<p>Dada $f(t)$ se tiene</p>
+
+$$\|f(t)\|^2=\begin{cases}
+e^{-6t}&\mbox{si }0\leq t\\
+0&\mbox{en otro caso}
+\end{cases}$$
+
+<p>Entonces la energía se calcula como</p>
+
+$$E_f=\int_{-\infty}^{\infty}\|f(t)\|^2dt=\int_{-\infty}^{0}0dt+\int_{0}^{\infty}e^{-6t}dt=\left.-\frac{e^{-6t}}{6}\right|_{0}^{\infty}=\frac{1}{6}$$
+
+<p>Así, esta señal es de energía. Es importante que se verifique que si calculamos la potencia de esta señal el resultado será cero. </p>
+
+
+
+</div>
+</div>
+			
+<button class="dmbutton" onclick="Stc4o()">Solución</button>
+</div>          
+                                
+                                <p><iframe src="https://octave-online.net/" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" height="800" width="850"></iframe></p>
