@@ -226,7 +226,7 @@ a:hover {
 	font-weight: 300;
 	font-size: 4em;
 	padding: 0 0 10px;
-	color: #333;
+	color: #B45F04;
 	margin: 0 1% 40px;
 	text-align: left;
 	box-shadow: 0 10px 0 rgba(0,0,0,0.02);
@@ -243,7 +243,13 @@ a:hover {
 	font-weight: 300;
 	padding: 5px 8%;
 	text-align: justify;
+    color: black;
 }
+
+.content h3 {
+	color: #709ca9;
+}
+
 
 .row {
   margin-right: -15px;

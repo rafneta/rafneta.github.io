@@ -24,12 +24,11 @@ function Stc3c() {
 function Stc4o() {
     document.getElementById("stc4").style.width = "100%";
 }
-
-//Operaciones con señales discretas
 function Stc4c() {
     document.getElementById("stc4").style.width = "0%";
 }
 
+//Operaciones con señales discretas
 function Ostd1o() {
     document.getElementById("ostd1").style.width = "100%";
 }
@@ -49,6 +48,53 @@ function Md1o() {
 }
 function Md1c() {
     document.getElementById("md1").style.width = "0%";
+}
+
+//Convolucion en tiempo continuo
+function Ctc1o() {
+    document.getElementById("ctc1").style.width = "100%";
+}
+function Ctc1c() {
+    document.getElementById("ctc1").style.width = "0%";
+}
+function Ctc2o() {
+    document.getElementById("ctc2").style.width = "100%";
+}
+function Ctc2c() {
+    document.getElementById("ctc2").style.width = "0%";
+}
+function Ctc3o() {
+    document.getElementById("ctc3").style.width = "100%";
+}
+function Ctc3c() {
+    document.getElementById("ctc3").style.width = "0%";
+}
+function Ctc4o() {
+    document.getElementById("ctc4").style.width = "100%";
+}
+function Ctc4c() {
+    document.getElementById("ctc4").style.width = "0%";
+}
+function Ctc5o() {
+    document.getElementById("ctc5").style.width = "100%";
+}
+function Ctc5c() {
+    document.getElementById("ctc5").style.width = "0%";
+}
+
+
+//Series de Fourier continuas
+function Sfc1o() {
+    document.getElementById("sfc1").style.width = "100%";
+}
+function Sfc1c() {
+    document.getElementById("sfc1").style.width = "0%";
+}
+function Sfc2o() {
+    document.getElementById("sfc2").style.width = "100%";
+}
+function Sfc2c() {
+    document.getElementById("sfc2").style.width = "0%";
 }
 
 
