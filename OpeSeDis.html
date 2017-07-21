@@ -1,0 +1,139 @@
+<h3>Traslación de señales</h3>
+
+<p>Las operaciones de traslación horizontal y/o vertical sobre una señal $f[n]$ tienen como consecuencia que se genere una nueva señal $g[n]$ cuya gráfica precisamente es un movimiento, horizontal o vertical de la gráfica de la señal "original". Denotaremos a la operación traslación con la letra \(\mathcal{T}\), con subíndice \(h\) para  traslación horizontal, así como un subíndice que indique la cantidad de unidades a trasladar. </p>
+
+<p>Si queremos generar una señal $g[n]$ que sea la traslación horizontal de la señal $f[n]$, \(n_0\in\mathbb{Z}\) unidades escribiremos:</p>
+
+<div id="ecuacion">
+            \begin{equation}
+  g[n]={\;}_h\mathcal{T}_{n_0}\left\{f[n]\right\}=f[n+n_0]
+ 
+\end{equation}
+
+</div>
+
+<p>Por lo regular la notación \({ }_{h}\mathcal{T}_{n_0}\) suele omitirse, aunque considero que la notación es importante en determinados problemas pues evita confusiones. Cuando $n_0 < 0$ la gráfica resultante se traslada a la derecha respecto a la original y se dice que esta señal esta retrasada en tiempo, pues lo que pasaba en un determinado momento ahora pasa después, porque la gráfica de la señal resultante esta a la derecha de la señal original. Cuando \(n_0>0\) la gráfica resultante se traslada a la izquierda respecto a la original y se dice que esta señal esta adelantada en tiempo, pues lo que pasaba en un determinado momento ahora pasa antes, porque la gráfica de la señal resultante esta a la izquierda de la señal original. Cuando \(n_0=0\) no hay ninguna traslación y la señal resultante es idéntica a la señal original. </p>
+    
+<p>De manera similar si queremos trasladar a la función $f[n]$ verticalmente $s_0$ unidades escribimos la notación equivalente. Cuando $s_0<0$ la gráfica resultante se traslada hacia abajo respecto a la original. Cuando $s_0>0$ la gráfica resultante se traslada hacia arriba respecto a la original. Cuando $s_0=0$ no hay ninguna traslación y la gráfica resultante es idéntica a la original. </p>
+    
+<div id="ecuacion">
+            \begin{equation}
+  g[n]={\;}_v\mathcal{T}_{s_0}\left\{f[n]\right\}=f[n]+s_0
+ 
+\end{equation}
+
+</div>
+
+<p>Cabe aclarar que los movimientos horizontales son contrarios a lo que se esperaría, mientras que los movimientos verticales concuerdan con la intuición, es decir, se esperaría que si el valor de traslación horizontal es positivo la gráfica se mueva a la derecha (y viceversa), pero ocurre lo contrario. En general este comportamiento "contrario" en las operaciones horizontales vuelve a suceder en los escalamientos, de los cuales hablaremos más adelante.  </p>
+
+<p>En la siguiente aplicación se pretende ilustrar lo que se ha comentado hasta el momento, es importante que observes que las operaciones no dependen de las letras que se utilizan para las variables, lo que es importante es la operación que se realiza. Puedes dar click en el botón play, también puedes editar la aplicación modificando las fórmulas o agregando otras.</p>
+
+<h3>Escalamiento de señales</h3>
+
+<p>Las operaciones de escalamiento horizontal y/o vertical sobre una señal $f[n]$ tienen como consecuencia que se genere una nueva señal $g[n]$ cuya gráfica precisamente es un escalamiento, horizontal o vertical de la gráfica de la señal "original". Denotaremos a la operación escalamiento con la letra \(\mathcal{E}\), con subíndice \(h\) para  escalamiento horizontal, así como un subíndice que indique la cantidad de unidades a escalar. </p>
+
+<p>Si queremos generar una señal $g[n]$ que sea el escalamiento horizontal de la señal \(f[n]\), \(b\neq 0\in\mathbb{Z}\) unidades escribiremos:</p>
+
+<div id="ecuacion">
+            \begin{equation}
+  g[n]={\;}_h\mathcal{E}_{b}\left\{f(t)\right\}=f[bn]
+ 
+\end{equation}
+
+</div>
+
+<p>Por lo regular la notación \({ }_{h}\mathcal{E}_{b}\) suele omitirse, aunque considero que la notación es importante en determinados problemas pues evita confusiones. Cuando $0 < b < 1$ la gráfica resultante es una expansión horizontal respecto a la original. Si $b=1$ no hay escalamiento, la gráfica resultante es idéntica a la original. Ahora si \(b>1\) la gráfica resultante es una compresión horizontal respecto a la original. Si \(b=0\) entonces la señal resultante es una constante (sería la evaluación de $f$ en $0$) que podría estar bien definida o no, eso dependerá de la forma de $f$, entonces se pierde la idea de escalamiento, por tal motivo este caso no lo consideramos.</p>
+
+<p>Ahora si $-1 < b < 0$ la gráfica resultante se expande y se invierte horizontalmente respecto a la original. Si  \(b=-1\) la gráfica resultante solo se invierte horizontalmente respecto a la original. Cuando $b<-1$ la gráfica resultante se comprime y se invierte horizontalmente respecto a la original. </p>
+    
+<p>De manera similar si queremos escalar a la función \(f[n]\) verticalmente \(a\neq 0\in\mathbb{R}\) unidades escribimos la notación equivalente. Cuando \(0<a<1\) la gráfica resultante se comprime, si \(a=1\) no hay escalamiento, \(a>1\) se expande. Si $-1<a<0$ se comprime e invierte, para $a=-1$ solo se invierte, si $a<-1$ se expande e invierte, todas los resultados son respecto a la gráfica original y escalamientos verticales. No se considera el caso $a=0$ ¿por qué? </p>
+    
+<div id="ecuacion">
+            \begin{equation}
+  g[n]={\;}_v\mathcal{E}_{a}\left\{f[n]\right\}=af[n]
+ 
+\end{equation}
+
+</div>
+
+<p>Observa que al igual que en las traslaciones hay un comportamiento "contrario" en los escalamientos horizontales, a lo que la intuición nos diría. </p>
+
+<p>En la siguiente aplicación se pretende ilustrar lo que se ha comentado hasta el momento, es importante que observes que las operaciones no dependen de las letras que se utilizan para las variables, lo que es importante es la operación que se realiza. Puedes dar click en el botón play, también puedes editar la aplicación modificando las fórmulas o agregando otras.  </p>
+
+<p>Las funciones coseno y seno al ser evaluadas en variable discreta adquieren dos características (no se presentan cuando se evalúan en una variable continua) estas características son las siguientes</p>
+    
+<div class="ejemplo">
+
+
+<div id="derecha">
+      <p>    <strong>Periodicidad señal discretas</strong><br></p></div>
+<p>La señal $cos[\omega_0 n]$ es periódica cuando $\frac{2\pi}{\omega_0}\in\mathbb{Q}$ y el periodo es el primer múltiplo entero de este número </p>
+
+<p>Nota: Esto también es válido para la función seno</p>
+
+<div id="ostd1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Ostd1c()">×</a>
+  <div class="overlay-content">                   
+Suponemos que existe $N_0\in\mathbb{Z}$ tal que 
+$$cos[\omega_0 n]=cos[\omega_0 (n+ N_0)]$$
+
+de la suma de ángulos para la función coseno, se tiene 
+
+$$cos[\omega_0 n]=cos[\omega_0 n]cos[\omega_0N_0]-sen[\omega_0 n]sen[\omega_0N_0]$$
+
+Entonces debe de suceder que $cos[\omega_0N_0]=1$ y $sen[\omega_0N_0]=0$ entonces $\omega_0 N_0=2\pi k$ con $k\in\mathbb{Z}$ o equivalentemente 
+
+$$\frac{N_0}{k}=\frac{2\pi}{\omega_0}\in\mathbb{Q}$$
+
+Ahora si esto sucede, como $N_0\in\mathbb{Z}$ y 
+$$N_0=\frac{2\pi}{\omega_0}k\in\mathbb{Q}$$
+
+Así se elige $k$ para tener un valor de $N_0$ entero. 
+  </div>
+</div>
+<br>
+<button class="dmbutton" onclick="Ostd1o()">Argumentos</button>
+                  
+                        <br>
+</div>
+    
+
+<div class="ejemplo">
+
+
+<div id="derecha">
+      <p>    <strong>Unicidad de señales discretas</strong><br></p></div>
+<p>Las señales en tiempo  discreto $cos[\omega_0 n]$ y $cos[\omega_1 n]$ son iguales si $\omega_0=\omega_1\,mod\,2\pi$ ($\omega_0$ es congruente con $\omega_1$ módulo $2\pi$), es decir cuando $2\pi$ divida a la diferencia $\omega_0-\omega_1$</p>
+
+<p>Nota: Esto también es válido para la función seno</p>
+
+<div id="ostd2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Ostd2c()">×</a>
+  <div class="overlay-content">                   
+Por hipótesis existe $k\in\mathbb{Z}$ tal que 
+
+$$\omega_0-\omega_1=2\pi k$$
+
+equivalentemente 
+ 
+$$\omega_0=\omega_1+2\pi k$$
+
+Entonces
+$$
+\begin{array}{rl}
+cos[\omega_0 n]&=cos[(\omega_1+2\pi k)n]\\
+&=cos[\omega_1 n]cos[2\pi kn]-sen[\omega_1 n]sen[2\pi kn]\\
+&=cos[\omega_1 n]
+\end{array}
+$$
+Así se concluye la afirmación. 
+ 
+
+  </div>
+</div>
+<br>
+<button class="dmbutton" onclick="Ostd2o()">Argumentos</button>
+                  
+                        <br>
+</div>
+

@@ -1,0 +1,73 @@
+<h3>Traslación de señales</h3>
+<p>Las operaciones de traslación horizontal y/o vertical sobre una señal \(f(t)\) tienen como consecuencia que se genere una nueva señal \(g(t)\) cuya gráfica precisamente es un movimiento, horizontal o vertical de la gráfica de la señal "original". Denotaremos a la operación traslación con la letra \(\mathcal{T}\), con subíndice \(h\) para  traslación horizontal, así como un subíndice que indique la cantidad de unidades a trasladar. </p>
+
+<p>Si queremos generar una señal $g(t)$ que sea la traslación horizontal de la señal \(f(t)\), \(t_0\in\mathbb{R}\) unidades escribiremos:</p>
+
+<div id="ecuacion">
+            \begin{equation}
+  g(t)={\;}_h\mathcal{T}_{t_0}\left\{f(t)\right\}=f(t+t_0)
+ 
+\end{equation}
+
+</div>
+
+<p>Por lo regular la notación \({ }_{h}\mathcal{T}_{t_0}\) suele omitirse, aunque considero que la notación es importante en determinados problemas pues evita confusiones. Cuando \(t_0<0\) la gráfica resultante se traslada a la derecha respecto a la original y se dice que esta señal esta retrasada en tiempo, pues lo que pasaba en un determinado momento ahora pasa después, porque la gráfica de la señal resultante esta a la derecha de la señal original. Cuando \(t_0>0\) la gráfica resultante se traslada a la izquierda respecto a la original y se dice que esta señal esta adelantada en tiempo, pues lo que pasaba en un determinado momento ahora pasa antes, porque la gráfica de la señal resultante esta a la izquierda de la señal original. Cuando \(t_0=0\) no hay ninguna traslación y la señal resultante es idéntica a la señal original. </p>
+    
+<p>De manera similar si queremos trasladar a la función \(f(t)\) verticalmente \(s_0\) unidades escribimos la notación equivalente. Cuando \(s_0<0\) la gráfica resultante se traslada hacia abajo respecto a la original. Cuando \(s_0>0\) la gráfica resultante se traslada hacia arriba respecto a la original. Cuando \(s_0=0\) no hay ninguna traslación y la gráfica resultante es idéntica a la original. </p>
+
+<div id="ecuacion">
+            \begin{equation}
+  g(t)={\;}_v\mathcal{T}_{s_0}\left\{f(t)\right\}=f(t)+s_0
+ 
+\end{equation}
+
+</div>
+
+<p>Cabe aclarar que los movimientos horizontales son contrarios a lo que se esperaría, mientras que los movimientos verticales concuerdan con la intuición, es decir, se esperaría que si el valor de traslación horizontal es positivo la gráfica se mueva a la derecha (y viceversa), pero ocurre lo contrario. En general este comportamiento "contrario" en las operaciones horizontales vuelve a suceder en los escalamientos, de los cuales hablaremos más adelante.  </p>
+        
+<p>En la siguiente aplicación se pretende ilustrar lo que se ha comentado hasta el momento, es importante que observes que las operaciones no dependen de las letras que se utilizan para las variables, lo que es importante es la operación que se realiza. Puedes dar click en el botón play, también puedes editar la aplicación modificando las fórmulas o agregando otras.</p>
+
+<p><iframe src="https://www.desmos.com/calculator/ycs22sdngy" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" height="450" width="850"></iframe></p>
+
+<h3>Escalamiento de señales</h3>
+
+<p>Las operaciones de escalamiento horizontal y/o vertical sobre una señal $f(t)$ tienen como consecuencia que se genere una nueva señal $g(t)$ cuya gráfica precisamente es un escalamiento, horizontal o vertical de la gráfica de la señal "original". Denotaremos a la operación escalamiento con la letra $\mathcal{E}$, con subíndice $h$ para  escalamiento horizontal, así como un subíndice que indique la cantidad de unidades a escalar. </p>
+
+<p>Si queremos generar una señal $g(t)$ que sea el escalamiento horizontal de la señal $f(t)$, $b\neq 0\in\mathbb{R}$ unidades escribiremos:</p>
+
+<div id="ecuacion">
+            \begin{equation}
+  g(t)={\;}_h\mathcal{E}_{b}\left\{f(t)\right\}=f(bt)
+\end{equation}
+
+</div>
+
+<p>Por lo regular la notación ${ }_{h}\mathcal{E}_{b}$ suele omitirse, aunque considero que la notación es importante en determinados problemas pues evita confusiones. Cuando $0 < b < 1$ la gráfica resultante es una expansión horizontal respecto a la original. Si $b=1$ no hay escalamiento, la gráfica resultante es idéntica a la original. Ahora si $b>1$ la gráfica resultante es una compresión horizontal respecto a la original. Si $b=0$ entonces la señal resultante es una constante (sería la evaluación de $f$ en $0$) que podría estar bien definida o no, eso dependerá de la forma de $f$, entonces se pierde la idea de escalamiento, por tal motivo este caso no lo consideramos.</p>
+
+<p>Ahora si $-1 < b < 0$ la gráfica resultante se expande y se invierte horizontalmente respecto a la original. Si  $b=-1$ la gráfica resultante solo se invierte horizontalmente respecto a la original. Cuando $b<-1$ la gráfica resultante se comprime y se invierte horizontalmente respecto a la original. </p>
+
+<p>De manera similar si queremos escalar a la función $f(t)$ verticalmente $a\neq 0\in\mathbb{R}$ unidades escribimos la notación equivalente. Cuando $0 < a < 1$ la gráfica resultante se comprime, si $a=1$ no hay escalamiento, $a>1$ se expande. Si $-1<a<0$ se comprime e invierte, para $a=-1$ solo se invierte, si $a<-1$ se expande e invierte, todas los resultados son respecto a la gráfica original y escalamientos verticales. No se considera el caso $a=0$ ¿por qué? </p>
+    
+<div id="ecuacion">
+            \begin{equation}
+  g(t)={\;}_v\mathcal{E}_{a}\left\{f(t)\right\}=af(t)
+\end{equation}
+
+</div>
+
+<p>Observa que al igual que en las traslaciones hay un comportamiento "contrario" en los escalamientos horizontales, a lo que la intuición nos diría. </p>
+
+<p>En la siguiente aplicación se pretende ilustrar lo que se ha comentado hasta el momento, es importante que observes que las operaciones no dependen de las letras que se utilizan para las variables, lo que es importante es la operación que se realiza. Puedes dar click en el botón play, también puedes editar la aplicación modificando las fórmulas o agregando otras.  </p>
+
+<p><iframe src="https://www.desmos.com/calculator/idglseokgr" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" height="450" width="850"></iframe></p>
+
+<p>Observemos que el orden de las operaciones verticales no conmuta. Si trasladamos y después escalamos verticalmente a la señal $f(t)$ tendríamos:</p>
+
+$f_1(t)={\;}_v\mathcal{T}_{s_0}\left\{f(t)\right\}=f(t)+s_0$<br>
+$f_2(t)={\;}_v\mathcal{E}_{a}\left\{f_1(t)\right\}=af_1(t)=af(t)+as_0$
+
+<p>Ahora si escalamos y después trasladamos verticalmente a la señal $f(t)$ tendríamos:
+</p>
+$g_1(t)={\;}_v\mathcal{E}_{a}\left\{f(t)\right\}=af(t)$<br>
+$g_2(t)={\;}_v\mathcal{T}_{s_0}\left\{g_1(t)\right\}=g_1(t)+s_0=af(t)+s_0$
+        

@@ -1,0 +1,63 @@
+<p>Decimos que una señal $f$ es par si: </p>
+
+$$f(t)=f(-t)$$
+
+<p>La gráfica de este tipo de señales es simétrica con respecto al eje vertical. Una propiedad importante de este tipo de señales es </p>
+
+$$\int_{-a}^{a}f(t)dt=2\int_{-a}^{0}f(t)dt=2\int_0^{a}f(t)dt$$
+
+<p>con $a>0\in\mathbb{R}$.</p>
+
+<p>La gráfica de este tipo de señales es simétrica con respecto al origen. Una propiedad importante de este tipo de señales es </p>
+
+$$\int_{-a}^{a}f(t)dt=0$$
+
+<p>con $a>0\in\mathbb{R}$.</p>
+
+<div class="ejemplo">
+
+
+<div id="derecha">
+      <p>    <strong>Representación de una señal </strong><br></p></div>
+<p>Toda señal $f$, se puede escribir como la suma de una señal par más una señal impar, es decir:</p>
+$$f(t)=f_p(t)+f_i(t)$$
+<p>con </p>
+$$f_p(t)=\frac{f(t)+f(-t)}{2}$$ 
+$$f_i(t)=\frac{f(t)-f(-t)}{2}$$ 
+
+<div id="md1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Md1c()">×</a>
+  <div class="overlay-content">                   
+Observamos primero que la suma es correcta, es decir
+
+$$f_p(t)+f_i(t)=\frac{f(t)+f(-t)+f(t)-f(-t)}{2}=f(t)$$
+
+Observemos que
+
+$$f_p(-t)=\frac{f(-t)+f(t)}{2}=\frac{f(t)+f(-t)}{2}=f_p(t)$$
+
+por lo tanto $f_p(t)$ es una señal par
+
+De manera similar
+
+$$-f_i(-t)=-\frac{f(-t)-f(t)}{2}=\frac{f(t)-f(-t)}{2}=f_i(t)$$
+
+por lo tanto $f_i(t)$ es una señal impar
+                
+
+ 
+
+  </div>
+</div>
+<button class="dmbutton" onclick="Md1o()">Argumentos</button>
+                  
+                        <br>
+</div>
+
+<p> A continuación se muestran señales con diferentes simetrías</p>
+
+<iframe src="https://www.desmos.com/calculator/ondqm0giya" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" height="450" width="850"></iframe>
+
+<p>Decimos que una señal $f$ es periódica si existe $T>0$ (el primero de ellos) tal que </p>
+
+$$f(t)=f(t+T)$$

@@ -1,3 +1,5 @@
+// Señales en tiempo continuo
+
 function Stc1o() {
     document.getElementById("stc1").style.width = "100%";
 }
@@ -23,13 +25,35 @@ function Stc4o() {
     document.getElementById("stc4").style.width = "100%";
 }
 
+//Operaciones con señales discretas
 function Stc4c() {
     document.getElementById("stc4").style.width = "0%";
 }
 
+function Ostd1o() {
+    document.getElementById("ostd1").style.width = "100%";
+}
+function Ostd1c() {
+    document.getElementById("ostd1").style.width = "0%";
+}
+function Ostd2o() {
+    document.getElementById("ostd2").style.width = "100%";
+}
+function Ostd2c() {
+    document.getElementById("ostd2").style.width = "0%";
+}
+
+// Mas definiciones
+function Md1o() {
+    document.getElementById("md1").style.width = "100%";
+}
+function Md1c() {
+    document.getElementById("md1").style.width = "0%";
+}
 
 
 
+// Transformada de Fourier continua
 function Fou1o() {
     document.getElementById("fou1").style.width = "100%";
 }

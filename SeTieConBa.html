@@ -1,0 +1,111 @@
+<h3>Escalón o función de Heaviside</h3>
+<p>El escalón (unitario) $u(t)$ se define así:  </p>
+
+<div id="ecuacion">
+           $$u(t)=\begin{cases}
+1&\mbox{si }0\leq t\\
+0&\mbox{en otro caso}
+\end{cases}$$
+</div>
+
+<p>depende del autor la definición del escalón (unitario, porque la máxima altura es $1$) podría ser diferente, algunos autores establecen a $u(0)$ como indefinido, es claro que al comparar estas definiciones resultan distintas, pero bajo operaciones que involucren integración los resultados son los mismos (como veremos adelante, la integración es la operación fundamental en el tratamiento de señales en tiempo continuo), esto permite usar la definición a conveniencia. </p>
+
+<p>La  gráfica de esta función es la siguiente: </p>
+
+<p>La representación gráfica que suele ser utilizada en señales es: </p>
+
+<h3>Delta de Dirac o impulso</h3>
+
+<p>Si se quiere ser preciso en definir  que es una delta de Dirac (nos referimos a ella como delta), desde un punto de vista matemático formal, me parece que el tema se complica. No obstante, lo que se establezca sobre la delta será cierto solo que los argumentos para "entender que es una delta" serán intuitivos. Un excelente documento para revisar este tema  es el siguiente <a href="http://esaez.mat.utfsm.cl/dirac.pdf">enlace</a> (claro, preciso y elegante). El esfuerzo por definir la delta de Dirac es necesario, pues la delta permite caracterizar a los sistemas como "transformadores de señales" en particular estudiaremos aquellos sistemas  que son Lineales e Invariantes en Tiempo (entiéndase esto como una clasificación de los sistemas que por el momento no es importante).</p>
+
+<p>La delta de Dirac es una estructura matemática que se conoce como distribución, las distribuciones permiten transformar funciones en objetos "más sencillos" (por ejemplo en números u otras "cosas"). Y en ese sentido para nuestros fines nos interesa la "transformación simbólica" cuando aparece la delta, así podemos dar una "definición simbólica". La delta de Dirac $\delta(t)$ se define como:</p>
+
+<div id="ecuacion">
+            \begin{array}{l}
+\delta(t-t_0)=0\mbox{ si }t\neq t_0\\
+\int\limits_{-\infty}^{\infty}f(t)\delta(t-t_0)\,dt=f(t_0)\mbox{ si } f \mbox{es continua en }t_0
+\end{array}
+</div>
+
+<p>En particular si $t_0=0$ y $f(t)=1$, se tiene que: </p>
+
+<div >
+            \begin{array}{l}
+\delta(t)=0\mbox{ si }t\neq 0\\
+\int\limits_{-\infty}^{\infty}\delta(t)\,dt=1
+\end{array}
+</div>
+
+<p>Es decir, identificamos un "serie de símbolos" por unos equivalentes conocidos, como son el número $0$ y evaluar una función $f(t_0)$. Para fines prácticos bastaría con acostumbrarse a esta operatividad, para nuestra fortuna hay una serie de motivaciones geométricas que nos pueden ayudar a asociar una idea geométrica de la delta  (idea geométrica, no es la gráfica como tal ¿por qué?).</p>
+
+<p><iframe src="https://www.desmos.com/calculator/8bchrj4ndm" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" height="450" width="850"></iframe></p>
+
+<p>La representación geométrica de la delta es la siguiente:</p>
+
+<p>Para valores "pequeños" de $a$ las señales anteriores satisfacen las condiciones de la definición de la delta cuando $t_0=0$, y $f(t)=1$. En particular es importante observar esto para la función $y_a(t)$</p>
+
+<div >
+            \begin{array}{l}
+\delta(t)=\lim\limits_{a\to 0}y_a(t)\\
+\delta(t)=\lim\limits_{a\to 0}\frac{1}{a}\left(u(t+\frac{a}{2})-u(t-\frac{a}{2})\right)\\
+\int\limits_{-\infty}^{\infty}y_a(t)\,dt=\frac{1}{a}\int\limits_{-a/2}^{a/2}\,dt=1
+\end{array}
+</div>
+
+<p>La teoría de distribuciones requiere herramientas matemáticas especializadas, pero se puede hacer una manipulación sencilla con simbólicos, a continuación se presentan una serie de propiedades de la delta de Dirac que pueden reducirse a partir de la definición y de operar el símbolo de integral de manera usual  </p>
+
+
+<table class="rwd-table">
+  <tr>
+       <th>#</th>
+    <th>Propiedad</th>
+        <th>Prueba</th>
+  </tr>
+
+<tr>
+    <td data-th="#">1.</td>
+    <td data-th="Propiedad">$f(t)\delta(t)=f(0)\delta(t)$ <br> $f$ continua en $0$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Propiedad 1">
+video</button></td>
+  </tr>
+
+<tr>
+    <td data-th="#">2.</td>
+    <td data-th="Propiedad">$\frac{d^n}{dt^n}\delta(t)=\delta^{(n)}(t)$<br> $n\in\mathbb{N}$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Propiedad 1">
+video</button></td>
+  </tr>
+
+
+<tr>
+    <td data-th="#">3.</td>
+    <td data-th="Propiedad">$\delta(at)=\frac{1}{|a|}\delta(t)$ <br> $a\neq 0\in\mathbb{R}$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Propiedad 1">
+video</button></td>
+  </tr>
+
+
+<tr>
+    <td data-th="#">4.</td>
+    <td data-th="Propiedad">$u(t-t_0)=\int\limits_{-\infty}^t\delta(\tau-t_0)\,dt$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Propiedad 1">
+video</button></td>
+  </tr>
+
+<tr>
+    <td data-th="#">5.</td>
+    <td data-th="Propiedad">$\frac{d}{dt}u(t-t_0)=\delta(t-t_0)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Propiedad 1">
+video</button></td>
+  </tr>
+
+<tr>
+    <td data-th="#">6.</td>
+    <td data-th="Propiedad">$\int\limits_{-\infty}^{\infty}f(t)\delta^{(n)}(t)dt=(-1)^nf^{(n)}(0)$<br>$n\in\mathbb{Z}_+$ $f$ es $n$ veces continuamente <br> diferenciable en $0$ </td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Propiedad 1">
+video</button></td>
+  </tr>
+
+</table>
+
+<p>Nota: La teoría de distribuciones fue desarrollada por el matemático francés Laurent Schwartz entre 1945-1950</p>
