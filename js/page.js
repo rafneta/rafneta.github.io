@@ -60,7 +60,7 @@ var Page = (function() {
 		} );
 		
 		// add swipe events
-		$items.on( {
+		/*$items.on( {
 			'swipeleft'		: function( event ) {
 				if( $container.data( 'opened' ) ) {
 					return false;
@@ -75,7 +75,7 @@ var Page = (function() {
 				bb.prev();
 				return false;
 			}
-		} );
+		} );*/
 
 		// show table of contents
 		$tblcontents.on( 'click', toggleTOC );
