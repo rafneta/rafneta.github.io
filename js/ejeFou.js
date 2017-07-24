@@ -97,59 +97,81 @@ function Sfc2c() {
     document.getElementById("sfc2").style.width = "0%";
 }
 
+//Series de Fourier discreta
+function Sfd1o() {
+    document.getElementById("sfd1").style.width = "100%";
+}
+function Sfd1c() {
+    document.getElementById("sfd1").style.width = "0%";
+}
+function Sfd2o() {
+    document.getElementById("sfd2").style.width = "100%";
+}
+function Sfd2c() {
+    document.getElementById("sfd2").style.width = "0%";
+}
 
 
 // Transformada de Fourier continua
-function Fou1o() {
-    document.getElementById("fou1").style.width = "100%";
+function Tfc1o() {
+    document.getElementById("tfc1").style.width = "100%";
+}
+function Tfc1c() {
+    document.getElementById("tfc1").style.width = "0%";
+}
+function Tfc2o() {
+    document.getElementById("tfc2").style.width = "100%";
+}
+function Tfc2c() {
+    document.getElementById("tfc2").style.width = "0%";
+}
+function Tfc3o() {
+    document.getElementById("tfc3").style.width = "100%";
+}
+function Tfc3c() {
+    document.getElementById("tfc3").style.width = "0%";
+}
+function Tfc4o() {
+    document.getElementById("tfc4").style.width = "100%";
+}
+function Tfc4c() {
+    document.getElementById("tfc4").style.width = "0%";
+}
+function Tfc5o() {
+    document.getElementById("tfc5").style.width = "100%";
+}
+function Tfc5c() {
+    document.getElementById("tfc5").style.width = "0%";
+}
+function Tfc6o() {
+    document.getElementById("tfc6").style.width = "100%";
+}
+function Tfc6c() {
+    document.getElementById("tfc6").style.width = "0%";
+}
+function Tfc7o() {
+    document.getElementById("tfc7").style.width = "100%";
+}
+function Tfc7c() {
+    document.getElementById("tfc7").style.width = "0%";
 }
 
-function Fou1c() {
-    document.getElementById("fou1").style.width = "0%";
+//Transformada de Fourier discreta
+function Tfd1o() {
+    document.getElementById("tfd1").style.width = "100%";
 }
-
-function Fou2o() {
-    document.getElementById("fou2").style.width = "100%";
+function Tfd1c() {
+    document.getElementById("tfd1").style.width = "0%";
 }
-
-function Fou2c() {
-    document.getElementById("fou2").style.width = "0%";
+function Tfd2o() {
+    document.getElementById("tfd2").style.width = "100%";
 }
-function Fou3o() {
-    document.getElementById("fou3").style.width = "100%";
+function Tfd2c() {
+    document.getElementById("tfd2").style.width = "0%";
 }
-
-function Fou3c() {
-    document.getElementById("fou3").style.width = "0%";
+function Tfd3o() {
+    document.getElementById("tfd3").style.width = "100%";
 }
-function Fou4o() {
-    document.getElementById("fou4").style.width = "100%";
-}
-
-function Fou4c() {
-    document.getElementById("fou4").style.width = "0%";
-}
-
-function Fou5o() {
-    document.getElementById("fou5").style.width = "100%";
-}
-
-function Fou5c() {
-    document.getElementById("fou5").style.width = "0%";
-}
-
-function Fou6o() {
-    document.getElementById("fou6").style.width = "100%";
-}
-
-function Fou6c() {
-    document.getElementById("fou6").style.width = "0%";
-}
-
-function Fou7o() {
-    document.getElementById("fou7").style.width = "100%";
-}
-
-function Fou7c() {
-    document.getElementById("fou7").style.width = "0%";
+function Tfd3c() {
+    document.getElementById("tfd3").style.width = "0%";
 }

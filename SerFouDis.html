@@ -1,0 +1,143 @@
+<p>En realidad el nombre correcto de esta sección debería ser: series de Fourier de señales en tiempo discreto, para hacer breve el título prefiero no utilizar el nombre completo.</p>
+
+<p>Para desarrollar las ideas de esta sección sería muy bueno que el lector este familiarizado con las series de Fourier de señales en tiempo continuo (aunque no es necesario, si solo se requiere realizar la operación, sin profundizar en la deducción y/o motivación).</p>
+
+<p>Definimos la series de Fourier (exponencial) para una señal en tiempo discreto $x[n]$ en $N_0\in \mathbb{N}$ evaluaciones ("o de longitud $N_0$") como  </p>
+
+<div id="ecuacion">
+           \begin{equation}
+  S_x[n]=\sum_{p=n_0}^{n_0+N_0-1}d_pe^{p\Omega_0nj}
+\end{equation}
+
+\begin{equation}
+
+d_p=\frac{1}{N_0}\sum_{r=n_0}^{n_0+N_0-1}x[r]e^{-r\Omega_0pj} 
+\end{equation}
+
+Con $\Omega_0=\frac{2\pi}{N_0}$ y $n_0$ el tiempo inicial de evaluación de la señal $x[n]$
+</div>
+
+<p>$d_p$ son los coeficientes de la serie de Fourier, es importante observar que en el intervalo de $n_0$ a $n_0+N_0-1$ hay $N_0$ puntos (números naturales).</p>
+
+<h3>Observaciones</h3>
+
+<ul>
+<li>La ecuación asociada a $S_x$ recibe el nombre de ecuación de síntesis (mismo nombre que en el caso continuo)</li>
+<li>La ecuación asociada a $d_p$ recibe el nombre de ecuación de análisis (mismo nombre que en el caso continuo)</li>
+<li>La ecuación de síntesis tiene una cantidad finita de términos, contrario al caso continuo. Esto es consecuencia de que las señales en tiempo discreto cuya frecuencia dista un múltiplo de $2\pi$  son iguales</li>
+<li>La serie de Fourier es periódica de periodo $N_0$, esto es, $S_x[n]=S_x[n+N_0]$</li>
+<li>Los coeficientes de Fourier son periódicos de periodo $N_0$, es decir, $d_{p}=d_{p+N_0}$</li>
+</ul>
+
+<h3>Relacion de Parseval</h3>
+
+<p>Existe una relación entre la potencia de una señal en tiempo discreto periódica y los coeficientes de su serie de Fourier, la relación es la siguiente</p>
+
+$$\frac{1}{N}\sum_{n=n_0}^{n_0+N_0-1}|x[n]|^2=\sum_{k= < N_0 >}|d_k|^2$$
+
+<p>La suma de la derecha se puede hacer en cualquier intervalo de longitud $N_0$</p>
+    
+<p>A continuación se presentan ejemplos donde se aplica directamente la definición que se ha comentado, posteriormente cuando estemos familiarizados con la operación se comentará sobre una motivación de esta definición </p> 
+
+  <div class="ejemplo">
+<div id="derecha">
+      <p>    <strong>Ejemplo 1.</strong><br></p></div>
+<p>
+            Encuentre la serie de Fourier $S_x[n]$ para la señal  
+
+$$x[n]=\begin{cases}
+(0.2)^n  & \text{si } n\in\left\{-1,0,1,2\right\} \\
+1 & \text{en otro caso}
+\end{cases}$$
+
+en $[-2,3]\bigcap \mathbb{Z}=\left\{-2,-1,0,1,2,3\right\}$
+</p>
+
+
+
+<div id="sfd1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Sfd1c()">×</a>
+  <div class="overlay-content">
+   
+  
+</div>
+</div>
+			
+<button class="dmbutton" onclick="Sfd1o()">Solución</button>
+</div>          
+    
+<div class="ejemplo">
+
+
+<div id="derecha">
+      <p>    <strong>Ejemplo 2.</strong><br></p></div>
+<p>  Encuentre la serie de Fourier discreta de la siguiente señal</p>
+
+<div id="sfd2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Sfd2c()">×</a>
+  <div class="overlay-content">                   
+            <iframe src="https://www.desmos.com/calculator/6vzcy5ftl3" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" height="700" width="90%"></iframe>        
+  </div>
+</div>
+<button class="dmbutton" onclick="Sfd2o()">Solución</button>
+                  
+                        <br>
+</div>
+
+<p>Como se podrá observar el cálculo de las series de Fourier discreta es una tarea ardua (no difícil), por lo que se puede hacer un programa que haga el cálculo de estos coeficientes, se ha desarrollado una función en MATLAB, que puede ser ejecutada en el siguiente enlace  (para ejecutar scrips se tiene que seguir las instrucciones de la página), en este caso la solución el ejemplo 1 descrito anteriormente se puede obtener ejecutando la siguiente instrucción</p>
+    
+<pre><code class="matlab"> 
+%MATLAB
+
+>> Forierdiscreto([1,5,1,0.2,0.04,1],6,-2,-10,7)
+
+</code></pre>
+    
+<p>El otro tipo de problemas a los que te puedes enfrentar es donde la señal sea una combinación (lineal o no) de senos y cosenos, entonces se utiliza la identidad de Euler para encontrar la serie de Fourier correspondiente   </p>
+    
+<pre><code class="matlab"> 
+%MATLAB
+function Forierdiscreto(xn,N0,n0,a,b)
+
+omega0=2*pi/N0;
+
+sprintf('\n')
+fprintf('%6s %12s %15s\n','p','real dp', 'imaginario dp')
+r=n0:n0+N0-1;
+
+for p=n0:n0+N0-1;
+E=exp(-r*omega0*p*j);
+dn(p-n0+1)=(1/N0)*sum(xn.*E);
+fprintf('%6.2d %12.5f %15.5f\n',p,real(dn(p-n0+1)), imag(dn(p-n0+1)))
+end
+
+sprintf('\n')
+fprintf('%6s %12s %15s\n','n','real x(n)', 'imaginaria x(n)')
+p=n0:n0+N0-1;
+
+for n=a:b
+E=exp(p*omega0*n*j);
+Sx(n-a+1)=sum(dn.*E);  
+fprintf('%6.2d %12.5f %15.5f\n',n,real(Sx(n-a+1)), imag(Sx(n-a+1)))
+end
+
+stem(a:b,Sx)
+grid on
+hold on 
+stem(n0:n0+N0-1,xn,'r')
+end
+
+
+</code></pre>
+    
+<h3>Espectro de Fourier</h3>
+
+<p>Al igual que en el caso continuo, los coeficientes de Fourier $d_p$ (en general) serán números complejos, por lo que se puede escribir (con varias convenciones) la información de la serie en dos gráficas, una sera $|d_p|$ vs $p\Omega_0$ y otra será $\angle d_p$ vs ​$p\Omega_0$  la primera recibe el nombre de espectro de magnitud y la segunda espectro de fase y en conjunto forman el espectro de Fourier para la señal correspondiente (al igual que el caso continuo).</p>
+
+<p>La construcción  es idéntica al caso continuo pero solo se tienen que construir $N_0$ coeficientes, pues estos son periódicos, así, los espectros son gráficas periódicas; por último si $x[n]$ es real entonces $d_p=\overline{d_p}$</p>
+
+<h3>¿Por qué la Serie tiene la forma descrita?</h3>
+
+<p>Es claro para el lector que si se plantea un problema de optimización del error cuadrático promedio entre la señal $x[n]$ y una combinación lineal  de exponenciales complejas ortogonales en el intervalo $ < N_0 > $; los coeficientes, como se han definido anteriormente, son el resultado de esta optimización (a mi parecer esto no es nada claro, pero es cierto, es futuras ediciones de este documento probaremos esta afirmación. Al autor (a mi) le pareció "gracioso" parafrasear textos en donde se sobreentiende que el lector es un estudiante erudito) </p>
+
+    

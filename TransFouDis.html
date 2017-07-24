@@ -1,0 +1,371 @@
+<p>Se define a la transformada de Fourier de una función \(x[n]\) en tiempo discreto como</p>
+
+<div id="ecuacion">
+           \begin{equation}
+  \mathscr{F}\left\{ x[n]  \right\}=\sum _{ n=-\infty  }^{ \infty  }{ x[n] } { e }^{ -j\Omega n }
+ 
+\end{equation}
+
+</div>
+
+<p>siempre y cuando esta suma converja. La transformada Fourier de funciones en tiempo discreto es una función  $X:A\subseteq\mathbb{R}\rightarrow\mathbb{C}$, por tal motivo la gráfica necesita tres ejes, de igual manera que en el caso de la transformada de Fourier continua se pueden obtener 2 gràficas, $|X(\Omega)|$ vs $\Omega$ el espectro de magnitud y $\angle\,X(\Omega)|$ vs $\Omega$ el espectro de fase, ambas gráficas conforman el espectro de Fourier.    </p>
+
+<p>Obsérvese que al realizar la suma, desaparece la variable  \(n\), por lo que este procedimiento da lugar a una nueva expresión en términos de una nueva variable \(\Omega\), y dependiendo de la literatura que se consulte se define la siguiente notación:</p>
+
+<div id="ecuacion">
+\begin{equation}
+\mathscr{F}\left\{ x[n]  \right\}=X(\Omega)=X(e^{j\Omega})
+\end{equation}
+    </div>
+
+<p>Se utilizará cualquiera de estas notaciones de manera indistinta.</p>
+
+<h3>Observaciones</h3>
+
+<ul>
+<li>La transformada de Fourier discreta $X(\Omega)$ tiene dominio continuo.</li>
+<li>La transformada de Fourier discreta es periódica de periodo $2\pi$, es decir $$X(\Omega)=X(\Omega+2\pi)$$ </li>
+</ul>
+
+<p>Los siguientes ejemplos, tienen la intención de familiarizar al lector con las operaciones necesarias para realizar la transformada de la Fourier discreta. </p>
+
+  <div class="ejemplo">
+<div id="derecha">
+      <p>    <strong>Ejemplo 1.</strong><br></p></div>
+<p>
+            Encuentre la transformada de Fourier discreta de \(x[n]=a^{ |n| }\)
+</p>
+
+
+
+<div id="tfd1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Tfd1c()">×</a>
+  <div class="overlay-content">
+ </div>
+</div>
+			
+<button class="dmbutton" onclick="Tfd1o()">Solución</button>
+</div>          
+
+<div class="ejemplo">
+
+
+<div id="derecha">
+      <p>    <strong>Ejemplo 2.</strong><br></p></div>
+<p>  Encuentre la transformada de Fourier de \(x[n]=\delta[n+1]-\delta[n-1]\), bosqueja los espectros de magnitud y de fase.</p>
+
+<div id="tfd2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Tfd2c()">×</a>
+  <div class="overlay-content">                   
+         
+  </div>
+</div>
+<button class="dmbutton" onclick="Tfd2o()">Solución</button>
+                  
+                        <br>
+</div>
+
+<div class="ejemplo">
+<div id="derecha">
+      <p>    <strong>Ejemplo 3.</strong><br></p></div>
+
+
+<p>Use la transformada de Fourier discreta para encontrar la solución a la siguiente ecuación en diferencias   $$y[n]-0.8y[n-1]=(0.5)^nu[n]$$</p>
+<div id="tfd3" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Tfd3c()">×</a>
+  <div class="overlay-content">
+    
+                        
+                        </div>
+</div>
+<button class="dmbutton" onclick="Tfd3o()">Solución</button>
+</div>
+
+<h3>Propiedades de la transformada de Fourier discreta</h3>
+
+<p>Si  se suponen ciertas condiciones sobre las expresiones a las cuales se les calcula su  transformada de Fourier discreta y se manipula la definición de la transformada, se pueden deducir propiedades, es decir, simplificaciones del uso de la transformación. La siguiente tabla muestra algunas de estas propiedades. </p>
+
+
+<table class="rwd-table">
+  <tr>
+<th>Propiedad</th>
+    <th> Expresión </th>
+    <th>$X(\Omega)=X(e^{j\Omega})$</th>
+    <th>Prueba</th>
+
+  </tr>
+  <tr>
+<td data-th=" Propiedad ">Linealidad</td>
+    <td data-th=" Expresión ">$ax_1[n]+bx_2[n]$</td>
+    <td data-th=" Transformada">$aX_1(\Omega)+bX_2(\Omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+  <tr>
+
+<td data-th=" Propiedad ">Traslación en $n$</td>
+    <td data-th=" Expresión ">$x[n-n_0]$</td>
+    <td data-th=" Transformada">$X(\Omega)e^{-jn_0 \Omega}$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+<tr>
+
+
+<tr>
+
+<td data-th=" Propiedad ">Inversión en $n$</td>
+    <td data-th=" Expresión ">$x[-n]$</td>
+    <td data-th=" Transformada">$X(-\Omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+<tr>
+<td data-th=" Propiedad ">Traslación en $\Omega$</td>
+    <td data-th=" Expresión ">$x[n]e^{j\Omega_0 n}$</td>
+    <td data-th=" Transformada">$X(\Omega-\Omega_0)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+
+
+
+ 
+<tr>
+<td data-th=" Propiedad ">Convolución en $n$</td>
+    <td data-th=" Expresión ">$x_1[n]*x_2[n]$</td>
+    <td data-th=" Transformada">$X_1(\Omega)X_2(\Omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+<tr>
+<td data-th=" Propiedad ">Convolución en $\Omega$</td>
+    <td data-th=" Expresión ">$x_1[n]x_2[n]$</td>
+    <td data-th=" Transformada">$\frac{1}{2\pi}X_1(\Omega)*X_2(\Omega),\mbox{ en }<2\pi>$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+<tr>
+<td data-th=" Propiedad ">Acumulación</td>
+    <td data-th=" Expresión ">$\sum\limits_{k=-\infty}^{n}x[k]$</td>
+    <td data-th=" Transformada">$\frac{1}{1-e^{-j\Omega}}X(\Omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+<tr>
+<td data-th=" Propiedad ">Multiplicación por $n$</td>
+    <td data-th=" Expresión ">$nx[n]$</td>
+    <td data-th=" Transformada">$j\frac{d}{d\Omega}X(\Omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+<tr>
+<td data-th=" Propiedad ">Teorema de Parseval</td>
+    <td data-th=" Expresión ">$E_x=\sum\limits_{n=-\infty}^\infty{}|x[n]|^2$</td>
+    <td data-th=" Transformada">$E_x=\frac{1}{2\pi}\int\limits_{<2\pi>}|X(\Omega)|^2d\Omega$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+</table>
+
+<h3>Tabla de Transformadas de Fourier discreta</h3>
+
+<p>La siguiente tabla muestra las transformadas de Fourier discreta  de señales usuales, es importante se utilice la tabla solo si se tiene claro que significa cada elemento involucrado,  de lo contrario, es importante que se revisen las condiciones bajo las cuales las fórmulas listadas son válidas.</p>
+
+<table class="rwd-table">
+  <tr>
+       <th>#</th>
+    <th>$x[n]$</th>
+    <th>$X(\Omega)=X(e^{j\Omega})$</th>
+    <th>Condición</th>
+    <th>Prueba</th>
+<th>Gráfica de $x[n]$</th>
+<th>Gráfica de $X(\Omega)$</th>
+<th>Espectro de Fourier</th>
+
+  </tr>
+  <tr>
+    <td data-th="#">1.</td>
+    <td data-th=" Expresión ">$\delta [n]$</td>
+    <td data-th=" Transformada">$1$</td>
+    <td data-th="Condición"></td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="Xmp5JcYxVQA?start=9&enablejsapi=1" title="...">
+enlace</button></td>
+<td data-th=" Gráfica de la expresión"></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+ <tr>
+    <td data-th="#">2.</td>
+    <td data-th=" Expresión ">$a^nu[n]$</td>
+    <td data-th=" Transformada">$\frac{e^{j\Omega}}{e^{j\Omega}-a}=\frac{1}{1-e^{-j\Omega}a}$</td>
+    <td data-th="Condición">$|a|<1$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Gráfica de la expresión"></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+ 
+<tr>
+   <td data-th="#">3.</td>
+    <td data-th=" Expresión ">$na^{n}u[n]$</td>
+    <td data-th=" Transformada">$\frac{ae^{j\Omega}}{(e^{j\Omega}-a)^2}$</td>
+    <td data-th="Condición">$|a|<1$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+ <tr>
+    <td data-th="#">4.</td>
+    <td data-th=" Expresión ">$a^{|n|}$</td>
+    <td data-th=" Transformada">$\frac{1-a^2}{1-2a\cos(\Omega)+a^2}$</td>
+    <td data-th="Condición">$|a|<1$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+ 
+
+
+ <tr>
+    <td data-th="#">5.</td>
+    <td data-th=" Expresión ">$a^n\cos(\Omega_0n+\theta)u[n]$</td>
+    <td data-th=" Transformada">$\frac{e^{j\Omega}[e^{j\Omega}\cos(\theta)-a\cos(\Omega_0-\theta)]}{e^{j2\Omega}-2a\cos(\Omega_0)e^{j\Omega} + a^2}$</td>
+    <td data-th="Condición">$|a|<1$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="Xmp5JcYxVQA?start=9&enablejsapi=1" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+ <tr>
+    <td data-th="#">6.</td>
+    <td data-th=" Expresión ">$-a^nu[-n+1]$</td>
+    <td data-th=" Transformada">$\frac{e^{j\Omega}}{e^{j\omega}-a}$</td>
+    <td data-th="Condición">$|a|>1$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="Xmp5JcYxVQA?start=9&enablejsapi=1" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+<tr>
+    <td data-th="#">7.</td>
+    <td data-th=" Expresión ">$u[n]-u[n-M]$</td>
+    <td data-th=" Transformada">$\frac{sen(M\Omega/2)}{sin(\Omega/2)}e^{-j\Omega (M-1)/2}$</td>
+    <td data-th="Condición"></td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+
+<tr>
+    <td data-th="#">8.</td>
+    <td data-th=" Expresión ">$\frac{\Omega_c}{\pi}Sa[\Omega_cn]$</td>
+    <td data-th=" Transformada">$\sum\limits_{k=-\infty}^\infty rect\left(\frac{\Omega-2\pi k}{2\Omega_c}\right)$</td>
+    <td data-th="Condición">$\Omega_c<\pi$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+
+<tr>
+   <td data-th="#">9.</td>
+    <td data-th=" Expresión ">$u[n]$</td>
+    <td data-th=" Transformada">$\frac{e^{j\Omega}}{e^{j\Omega}-1}+\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-2\pi k)$</td>
+    <td data-th="Condición"></td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+
+<tr>
+   <td data-th="#">10.</td>
+    <td data-th=" Expresión ">$1$</td>
+    <td data-th=" Transformada">$2\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-2\pi k)$</td>
+    <td data-th="Condición"></td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+
+<tr>
+    <td data-th="#">11.</td>
+    <td data-th=" Expresión ">$e^{j\Omega_0 n}$</td>
+    <td data-th=" Transformada">$2\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)$</td>
+    <td data-th="Condición"></td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+
+<tr>
+   <td data-th="#">12.</td>
+    <td data-th=" Expresión ">$\cos(\Omega_0n)$</td>
+    <td data-th=" Transformada">$\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)+\delta(\Omega+\Omega_0-2\pi k)$</td>
+    <td data-th="Condición"></td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+<tr>
+   <td data-th="#">13.</td>
+    <td data-th=" Expresión ">$sen(\Omega_0 n)$</td>
+    <td data-th=" Transformada">$j\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega+\Omega_0-2\pi k)-\delta(\Omega-\Omega_0-2\pi k)$</td>
+    <td data-th="Condición"></td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+<tr>
+   <td data-th="#">14.</td>
+    <td data-th=" Expresión ">$cos(\Omega_0 n)u[n]$</td>
+    <td data-th=" Transformada">$\frac{e^{j2\Omega}-e{j\Omega}\cos(\Omega_0)}{e^{j2\Omega}-2e{j\Omega}\cos(\Omega_0)+1}+\frac{\pi}{2}\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)+\delta(\Omega+\Omega_0-2\pi k)$</td>
+    <td data-th="Condición"></td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>
+  </tr>
+
+<tr>
+    <td data-th="#">15.</td>
+    <td data-th=" Expresión ">$sin(\Omega_0 n)u[n]$</td>
+    <td data-th=" Transformada">$\frac{e{j\Omega}sin(\Omega_0)}{e^{j2\Omega}-2e{j\Omega}\cos(\Omega_0)+1}+\frac{\pi}{2j}\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)-\delta(\Omega+\Omega_0-2\pi k)$</td>
+    <td data-th="Condición"> </td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+
+</table>
+
+
+
