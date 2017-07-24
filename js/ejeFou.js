@@ -2,6 +2,7 @@
 
 function Stc1o() {
     document.getElementById("stc1").style.width = "100%";
+     
 }
 
 function Stc1c() {
@@ -86,6 +87,7 @@ function Ctc5c() {
 //Series de Fourier continuas
 function Sfc1o() {
     document.getElementById("sfc1").style.width = "100%";
+    
 }
 function Sfc1c() {
     document.getElementById("sfc1").style.width = "0%";
@@ -115,9 +117,12 @@ function Sfd2c() {
 // Transformada de Fourier continua
 function Tfc1o() {
     document.getElementById("tfc1").style.width = "100%";
+    $("#container").style.zIndex=-1;
 }
 function Tfc1c() {
     document.getElementById("tfc1").style.width = "0%";
+    $("#container").style.zIndex=1;
+
 }
 function Tfc2o() {
     document.getElementById("tfc2").style.width = "100%";
