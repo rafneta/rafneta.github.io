@@ -40,24 +40,10 @@
             MathJax.Hub.Config({
     TeX: { equationNumbers: { autoNumber: "AMS" } }});  </script> -->
         
-      <!--  <script type="text/x-mathjax-config">
-           MathJax.Hub.Config({
-        CommonHTML: {scale: 100}});</script>-->
-		<script type="text/x-mathjax-config">
-           MathJax.Hub.Config({
-        SVG: {
-    scale: 120
-  }});
-        MathJax.Hub.Queue(
-  function () {
-    $("#cubierta1").fadeOut(); 
-  }
-);
-</script>
-          
-
-        
         <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+        CommonHTML: {scale: 100}});</script>
+		<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -70,8 +56,7 @@
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
         
-               		<script src="js/cargar.js"></script>
-
+               
 	</head>
 	<body >
         
@@ -3390,6 +3375,7 @@ solución</button>
 				<span id="tblcontents" class="menu-button">Table of Contents</span>
 
 			</div>
+				
 		</div><!-- /container -->
 		
 		<script src="js/jquery.mousewheel.js"></script>
@@ -3410,11 +3396,7 @@ solución</button>
 <script>hljs.initHighlightingOnLoad();</script>
     
 <script type="text/javascript" src="jquery.youtubepopup.min.js"></script>
-        <div id="cubierta1">Cargando matemáticas..</div>
-    				<div id="cubierta">Cargando multimedia..</div>
-        
-
-
+    
 	</body>
 </html>
 
