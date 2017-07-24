@@ -175,3 +175,29 @@ function Tfd3o() {
 function Tfd3c() {
     document.getElementById("tfd3").style.width = "0%";
 }
+
+//Transformada de Laplace
+function Tl1o() {
+    document.getElementById("tl1").style.width = "100%";
+}
+function Tl1c() {
+    document.getElementById("tl1").style.width = "0%";
+}
+function Tl2o() {
+    document.getElementById("tl2").style.width = "100%";
+}
+function Tl2c() {
+    document.getElementById("tl2").style.width = "0%";
+}
+function Tl3o() {
+    document.getElementById("tl3").style.width = "100%";
+}
+function Tl3c() {
+    document.getElementById("tl3").style.width = "0%";
+}
+function Tl4o() {
+    document.getElementById("tl4").style.width = "100%";
+}
+function Tl4c() {
+    document.getElementById("tl4").style.width = "0%";
+}
