@@ -8,8 +8,8 @@ var Page = (function() {
 		bb = $( '#bb-bookblock' ).bookblock( {
 			speed : 0.1,//2000,//800,
 			perspective : 0.1, //1000,//2000,
-			shadowSides	: 0.01, //1.4,//0.8,
-			shadowFlip	: 0.01,//0.2,//0.4,
+			shadowSides	: 0.1, //1.4,//0.8,
+			shadowFlip	: 0.1,//0.2,//0.4,
 			onEndFlip : function(old, page, isLimit) {
 				
 				current = page;
