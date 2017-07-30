@@ -72,17 +72,17 @@
 		// easing for the flip transition
 		easing : 'ease-in-out',
 		// if set to true, both the flipping page and the sides will have an overlay to simulate shadows
-		shadows : false,
+		shadows : true,
 		// opacity value for the "shadow" on both sides (when the flipping page is over it)
 		// value : 0.1 - 1
-		shadowSides : 0.1,
+		shadowSides : 0.2,
 		// opacity value for the "shadow" on the flipping page (while it is flipping)
 		// value : 0.1 - 1
 		shadowFlip : 0.1,
 		// perspective value
-		perspective : 1,
+		perspective : 1300,
 		// if we should show the first item after reaching the end
-		circular : true,
+		circular : false,
 		// if we want to specify a selector that triggers the next() function. example: '#bb-nav-next'
 		nextEl : '',
 		// if we want to specify a selector that triggers the prev() function
