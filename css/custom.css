@@ -411,14 +411,14 @@ margin-top: 30px;
 	border-radius: 15px;
     border-color: #B34D00;
 background: #e2e2cf;*/
-    
-     border-style:solid;
+    border-left: 5px solid;
+     /*border-style:solid;
     border-width:5px;
     -webkit-border-radius:5px;
-	border-radius: 5px;
-   border-color:#2178a3;/**#CD853F;/** rgba(112, 156, 169, 0.66);*/
+	border-radius: 5px;*/
+   border-color:rgba(112, 156, 169, 0.9);/**#CD853F;/** rgba(112, 156, 169, 0.66);#2178a3*/
   /*background: #2178a3;rgba(33, 120, 163, 0.8);*/ /*#2178a3;*/
-  color  : black;
+  color: rgba(112, 156, 169, 0.9);
   font-family: 'Lato', sans-serif;
   font-size: 1.2em;
   font-weight: 300;
@@ -426,9 +426,86 @@ background: #e2e2cf;*/
   /*box-shadow: 10px 10px 10px #366272;	jala bien en el azul*/
   overflow: scroll;
   /*width:100%;*/
-  padding: 4% 8% 4% 10%;
+  padding: 2% 4% 2% 4%;
   box-sizing: border-box;
-  width:90%;
+  width:80%;
+   margin-left:auto;
+    margin-right:auto;
+    margin-bottom:2%;
+    margin-top:2%;
+    background: rgba(112, 156, 169, 0.1);
+}
+
+#ejemplocorto{	
+   /** border-style:solid;
+    border-width:3px;
+    -webkit-border-radius:15px;
+	border-radius: 15px;
+    border-color: #B34D00;
+background: #e2e2cf;*/
+    border-left: 5px solid;
+     /*border-style:solid;
+    border-width:5px;
+    -webkit-border-radius:5px;
+	border-radius: 5px;*/
+   border-color:rgba(180,95,4,0.7);/**#CD853F;/** rgba(112, 156, 169, 0.66);#2178a3*/
+  /*background: #2178a3;rgba(33, 120, 163, 0.8);*/ /*#2178a3;*/
+  color: rgba(180,95,4,0.7);
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 30px;
+  /*box-shadow: 10px 10px 10px #366272;	jala bien en el azul*/
+  overflow: scroll;
+  /*width:100%;*/
+  padding: 2% 4% 2% 4%;
+  box-sizing: border-box;
+  width:80%;
+   margin-left:auto;
+    margin-right:auto;
+    margin-bottom:2%;
+    margin-top:2%;
+    background: rgba(180,95,4,0.1);
+}
+
+ #ejemplocorto li {
+	display: block;
+	color: #000;
+	font-size: 1em;
+	line-height: 3.5;
+	border-bottom: 1px rgba(180,95,4,0.5);
+}
+
+#ejemplo{	
+   /** border-style:solid;
+    border-width:3px;
+    -webkit-border-radius:15px;
+	border-radius: 15px;
+    border-color: #B34D00;
+background: #e2e2cf;*/
+    border-left: 5px solid;
+     /*border-style:solid;
+    border-width:5px;
+    -webkit-border-radius:5px;
+	border-radius: 5px;*/
+   border-color:rgba(112, 156, 169, 0.9);/**#CD853F;/** rgba(112, 156, 169, 0.66);#2178a3*/
+  /*background: #2178a3;rgba(33, 120, 163, 0.8);*/ /*#2178a3;*/
+  color: rgba(112, 156, 169, 0.9);
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 30px;
+  /*box-shadow: 10px 10px 10px #366272;	jala bien en el azul*/
+  overflow: scroll;
+  /*width:100%;*/
+  padding: 2% 4% 2% 4%;
+  box-sizing: border-box;
+  width:80%;
+   margin-left:auto;
+    margin-right:auto;
+    margin-bottom:2%;
+    margin-top:2%;
+    background: rgba(112, 156, 169, 0.1);
 }
 
 }
@@ -543,5 +620,33 @@ text-align:right;
 	height: 100%;
 }
 
+.polaroid {
+  width: 80%;
+  background-color: white;
+  /*box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);*/
+  margin-bottom: 25px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2%;
+}
+
+.despolaroid p{
+  text-align: center;
+  padding: 10px 20px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 0.8em;
+	line-height: 1;
+	font-weight: 200;
+}
+
+ img {
+    display: block;
+    margin: auto;
+    /*width: 95%;*/
+    border-bottom: 4px solid #ddd;
+    padding: 5px;
+}
+ 
 
 
