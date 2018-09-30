@@ -89,8 +89,8 @@
                     <li ><a href="#item6">Más definiciones</a></li>
                     <li ><a href="#item7">Señales básicas</a></li>
                     <li ><a href="#item8">Convolución en tiempo continuo</a></li>
-                    <!--
                     <li ><a href="#item9">Convolución en tiempo discreto</a></li>
+                    <!--
                     <li ><a href="#item10">Correlación en tiempo continuo</a></li>
                     <li ><a href="#item11">Correlación en tiempo discreto</a></li>
                     -->
@@ -1181,16 +1181,267 @@ video</button></td>
                                 </div>
                         </div>
                     </div>
-                    <!--
+                    
                     <div class="bb-item" id="item9">
 						<div class="content">
 							<div class="scroller">
                                 <h2>Convolución en tiempo discreto</h2>
-                                identificador9
-                            </div>
+<h3>Definición de convolución</h3>
+<p>La operación de convolución entre dos señales $f(t)$ y $x(t)$ genera una nueva señal $g(t)$, la operación se define como:</p>
+
+<div id="ecuacion">
+            \begin{equation}
+  g(t)=f(t)*x(t)=\int_{-\infty}^{\infty}f(\tau)x(t-\tau)\,d\tau
+ 
+\end{equation}
+</div>
+
+<p>Nota: También se conoce a la convolución como producto composición, integral de superposición, integral de Duhamel. </p>
+
+<p>Esta operación tiene diferentes simplificaciones dependiendo de como sea la forma de las señales involucradas, comenzamos con el caso que aparece frecuentemente en sistemas. </p>
+
+<div class="ejemplo">
+<div id="derecha">
+      <p>    <strong>Señales causales</strong><br></p></div>
+<p>Si las señales son causales y tienen longitud infinita entonces la convolución es:</p>
+$$g(t)=\begin{cases}
+\int_0^t f(\tau)x(t-\tau)\,d\tau&\mbox{si }0\leq t\\
+0&\mbox{en otro caso}
+\end{cases}$$
+
+<div id="ctc5" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Ctc5c()">×</a>
+  <div class="overlay-content">                   
+Escribiremos el escalón unitario de manera implícita  $f(t)u(t)$ y $x(t)u(t)$, al sustituir en la definición de convolución
+
+$$\int_{-\infty}^{\infty}f(\tau)u(\tau)x(t-\tau)u(t-\tau)\,d\tau$$                
+     
+Si $\tau<0$ entonces $u(\tau)=0$ así la integral se reduce a:
+
+$$\int_{0}^{\infty}f(\tau)u(\tau)x(t-\tau)u(t-\tau)\,d\tau$$ 
+
+Si $t-\tau < 0$ equivalentemente $t < \tau$ entonces $u(t-\tau)=0$ y los escalones tienen valor unitario, así la integral se reduce a:
+
+$$\int_{0}^{t}f(\tau)x(t-\tau)\,d\tau$$ 
+
+               
+  </div>
+</div>
+<button class="dmbutton" onclick="Ctc5o()">Argumentos</button>
+                  
+                        <br>
+</div>
+<p>Otra caso para tener en cuenta es cuando las señales tienen longitud finita, es decir, son cero para casi todo su intervalo de definición, en tales circunstancias se puede dar una sugerencia de los pasos a seguir para realizar la convolución. </p>
+
+<div class="ejemplo">
+
+<div id="derecha">
+      <p>    <strong>Pasos para realizar convoluciones</strong><br></p></div>
+
+<p>1. Seleccionar una de las dos señal para graficar con el argumento $\tau$</p>
+<p>2. La segunda señal se gráfica con el argumento $-\tau$</p>
+<p>3. En la segunda señal para cada valor horizontal de cambio de geometría se suma la variable $t$ </p>
+<p>4. Se traslada la segunda señal mediante la variable $t\in\mathbb{R}$ hasta que $f(\tau)g(t-\tau)$ no sea cero </p>
+<p>5. Mediante el paso anterior se eligen los valores de $\tau$ para realizar la integral </p>  
+<p>6. Se anota el intervalo de $t$ para los cuales los pasos 4 y 5 son válidos</p>
+<p>7. Se repite los pasos 4-6 hasta que $t$  tome todos los valores reales </p>               
+</div>
+    
+<p>De la definición es fácil ver que se satisfacen las siguientes propiedades</p>  
+    
+<div class="ejemplo">
+
+
+<div id="derecha">
+      <p>    <strong>Propiedades de la convolución</strong><br></p></div>
+1) La convolución conmuta $$f(t)*x(t)=x(t)*f(t)$$
+<div id="ctc1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Ctc1c()">×</a>
+  <div class="overlay-content">                   
+Escribiremos el escalón unitario de manera implícita  $f(t)u(t)$ y $x(t)u(t)$, al sustituir en la definición de convolución
+
+  </div>
+</div>
+<button class="dmbutton" onclick="Ctc1o()">Argumentos</button>
+                  
+                        <br>
+2) La convolución asocia $$\left(f(t)*x(t)\right)*z(t)=f(t)*\left(x(t)*z(t)\right)$$
+<div id="ctc2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Ctc2c()">×</a>
+  <div class="overlay-content">                   
+Escribiremos el escalón unitario de manera implícita  $f(t)u(t)$ y $x(t)u(t)$, al sustituir en la definición de convolución
+
+  </div>
+</div>
+<button class="dmbutton" onclick="Ctc2o()">Argumentos</button>
+<br>
+3) La convolución distribuye $$f(t)*\left(x(t)+z(t)\right)=f(t)*x(t)+f(t)*z(t)$$
+<div id="ctc3" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Ctc3c()">×</a>
+  <div class="overlay-content">                   
+Escribiremos el escalón unitario de manera implícita  $f(t)u(t)$ y $x(t)u(t)$, al sustituir en la definición de convolución
+
+$$\int_{-\infty}^{\infty}f(\tau)u(\tau)x(t-\tau)u(t-\tau)\,d\tau$$                
+              
+  </div>
+</div>
+<button class="dmbutton" onclick="Ctc3o()">Argumentos</button>
+
+<br>
+
+4) Identidad $$f(t)*\delta(t)=f(t)$$
+
+<div id="ctc4" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="Ctc4c()">×</a>
+  <div class="overlay-content">                   
+Escribiremos el escalón unitario de manera implícita  $f(t)u(t)$ y $x(t)u(t)$, al sustituir en la definición de convolución
+
+$$\int_{-\infty}^{\infty}f(\tau)u(\tau)x(t-\tau)u(t-\tau)\,d\tau$$                
+              
+  </div>
+</div>
+<button class="dmbutton" onclick="Ctc4o()">Argumentos</button>
+
+<br>
+
+5) Traslación. Si $f(t)*x(t)=y(t)$ entonces $$f(t-t_0)*x(t)=y(t-t_0)$$
+<br>
+
+6) Constantes. Si $a$ es constante entonces $$af(t)*x(t)=f(t)*ax(t)=a(f(t)*x(t))$$
+<br>
+
+7) Derivación con delta. Si $m\in\mathbb{N}$ entonces $$f(t)*\delta^{(m)}(t)=f^{(m)}(t)$$
+<br>
+
+8) Derivación. Si $f(t)*x(t)=y(t)$ y $m,n\in\mathbb{N}$ entonces $$f^{(m)}(t)*x^{(n)}(t)=y^{(m+n)}(t)$$
+<br>
+
+9) Escalamiento. Si $f(t)*x(t)=y(t)$ y $a\neq 0\in\mathbb{R}$ entonces $$f(at)*x(at)=\frac{1}{|a|}y(at)$$
+<br>
+
+</div>
+<h3>Observaciones</h3>
+    
+<ul>
+    <li>La convolución no necesariamente existe, i. e., no siempre se puede realizar para cualesquiera dos señales, por ejemplo si se quiere realizar $u(t)*u(-t)$ donde $u(t)$ es un escalón unitario, veremos que no hay convergencia para ningún valor de $t$</li>
+    <li>La convolución de señales periódicas también tiene detalles técnicos, es por eso que algunas veces se define una operación conocida como convolución periódica, que es similar a la definición de convolución salvo que los límites de integración no son infinitos.</li>
+    <li>El resultado de la convolución de dos señales es "más suave" que las señales involucradas.   </li>    
+</ul>
+    
+<p>Para los casos en donde las señales son causales se puede construir la siguiente tabla, la deducción de cada fórmula es de manera directa </p>
+
+<table class="rwd-table">
+  <tr>
+       <th>#</th>
+    <th>$f[n]$</th>
+    <th>$g[n]$</th>
+    <th>$f[n]*g[n]$</th>
+    <th>Prueba</th>
+  </tr>
+
+<tr>
+    <td data-th="#">1.</td>
+    <td data-th=" Señal ">$f[n]$</td>
+    <td data-th=" Señal">$\delta[n-n_0]$</td>
+    <td data-th="Convolución"> $f[n-n_0]$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Transformada de la delta de Dirac">
+video</button></td>
+  </tr>
+
+<tr>
+    <td data-th="#">2.</td>
+    <td data-th=" Señal ">$\gamma^{n}u[n]$</td>
+    <td data-th=" Señal">$u[n]$</td>
+    <td data-th="Convolución"> $\frac{1-\gamma^{n+1}}{1-\gamma}u[n]$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Transformada de la delta de Dirac">
+video</button></td>
+  </tr>
+
+<tr>
+    <td data-th="#">3.</td>
+    <td data-th=" Señal ">$u[n]$</td>
+    <td data-th=" Señal">$u[n]$</td>
+    <td data-th="Convolución"> $(n+1)u[n]$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Transformada de la delta de Dirac">
+video</button></td>
+  </tr>
+
+<tr>
+    <td data-th="#">4.</td>
+    <td data-th=" Señal ">$\gamma_1^{n}u[n]$</td>
+    <td data-th=" Señal">$\gamma_2^{n}u[n]$</td>
+    <td data-th="Convolución"> $\frac{\gamma_1^{n+1 }-\gamma^{n+1 }}{\gamma_1-\gamma_2}u[n]$<br>$\gamma_1\neq\gamma_2$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Transformada de la delta de Dirac">
+video</button></td>
+  </tr>
+
+
+<tr>
+    <td data-th="#">5.</td>
+    <td data-th=" Señal ">$\gamma_1^{n}u[n]$</td>
+    <td data-th=" Señal">$\gamma_2^{n}u[-(n+1)]$</td>
+    <td data-th="Convolución"> $\frac{\gamma_1}{\gamma_2-\gamma_1}\gamma_1^nu[n]+$
+    <br>$\frac{\gamma_2}{\gamma_2-\gamma_1}\gamma_2^nu[-(n+1)]$<br>$|\gamma_2|>|\gamma_1|$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Transformada de la delta de Dirac">
+video</button></td>
+  </tr>
+
+<tr>
+    <td data-th="#">6.</td>
+    <td data-th=" Señal ">$n\gamma_1^{n}u[n]$</td>
+    <td data-th=" Señal">$\gamma_2^{n}u[n]$</td>
+    <td data-th="Convolución"> $\frac{\gamma_1\gamma_2}{(\gamma_1-\gamma_2)^2}(\gamma_2^n-\gamma_1^n)u[n]+$
+    <br>$\frac{\gamma_1}{\gamma_1-\gamma_2}n\gamma_1^nu[n]$<br>$\gamma_1\neq\gamma_2$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Transformada de la delta de Dirac">
+video</button></td>
+  </tr>
+
+<tr>
+    <td data-th="#">7.</td>
+    <td data-th=" Señal ">$nu[n]$</td>
+    <td data-th=" Señal">$nu[n]$</td>
+    <td data-th="Convolución"> $\frac{1}{6}n(n-1)(n+1)u[n]$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Transformada de la delta de Dirac">
+video</button></td>
+  </tr>
+
+
+<tr>
+    <td data-th="#">8.</td>
+    <td data-th=" Señal ">$\gamma^{n}u[n]$</td>
+    <td data-th=" Señal">$\gamma^{n}u[n]$</td>
+    <td data-th="Convolución"> $(n+1)\gamma^nu[n]$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Transformada de la delta de Dirac">
+video</button></td>
+  </tr>
+
+<tr>
+    <td data-th="#">9.</td>
+    <td data-th=" Señal ">$\gamma^{n}u[n]$</td>
+    <td data-th=" Señal">$nu[n]$</td>
+    <td data-th="Convolución"> $\frac{\gamma(\gamma^n-1)+n(1-\gamma)}{(1-\gamma)^2}u[n]$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Transformada de la delta de Dirac">
+video</button></td>
+  </tr>
+
+<tr>
+    <td data-th="#">10.</td>
+    <td data-th=" Señal ">$|\gamma_1|^ncos[\beta n+ \theta]u[n]$</td>
+    <td data-th=" Señal">$\gamma_2^nu[n]$</td>
+    <td data-th="Convolución"> $\frac{|\gamma_1|^{n+1}cos[\beta(n+1)+\theta-\phi]}{R}u[n]-$
+    <br>$\frac{\gamma_2^{n+1}cos(\theta-\phi)}{R}u[n]$
+    <br>$\gamma_2$ real
+    <br>$R=\left(|\gamma_1|^2+\gamma_2^2-2|\gamma_1|\gamma_2cos(\beta)\right)^{0.5}$
+    <br>$\phi=tan^{-1}\left(\frac{|\gamma_1|sen(\beta)}{|\gamma_1|cos(\beta)-\gamma_2}\right)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="QLbXSyHvVn8?list=PLSC7gO5dTNPctF2If6_-ceBLRWuCmKWvg" title="Transformada de la delta de Dirac">
+video</button></td>
+  </tr>
+
+</table>
+                                </div>
                         </div>
                     </div>
-                    
+                    <!--
                     <div class="bb-item" id="item10">
 						<div class="content">
 							<div class="scroller">
@@ -1761,16 +2012,14 @@ enlace</button></td>
   </tr>
 
 <tr>
-
 <td data-th=" Propiedad ">Traslación en $\omega$</td>
-    <td data-th=" Expresión ">$f(t)e^{\omega_0 t}$</td>
+    <td data-th=" Expresión ">$f(t)e^{\omega_0 j t}$</td>
     <td data-th=" Transformada">$F(\omega-\omega_0)$</td>
     <td data-th="Prueba"><button class=" dmbutton youtube" id="lC0nyV9K89U?start=9&enablejsapi=1" title="...">
 enlace</button></td>
   </tr>
 
 <tr>
-
 <td data-th=" Propiedad ">Modulación de Amplitud</td>
     <td data-th=" Expresión ">$f(t)cos(\omega_0t)$</td>
     <td data-th=" Transformada">$\frac{1}{2}F(\omega-\omega_0)+\frac{1}{2}F(\omega+\omega_0)$</td>
@@ -1786,47 +2035,16 @@ enlace</button></td>
     <td data-th="Prueba"><button class=" dmbutton youtube" id="ujgIPF8lipg?start=9&enablejsapi=1" title="...">
 enlace</button></td>
   </tr>
-
-
+    
 <tr>
-
-<td data-th=" Propiedad ">Derivada</td>
-    <td data-th=" Expresión ">$\frac{d}{dt}f(t)$</td>
-    <td data-th=" Transformada">$j\omega F(\omega)$</td>
+<td data-th=" Propiedad ">Conjugación</td>
+    <td data-th=" Expresión ">$f^*(t)$</td>
+    <td data-th=" Transformada">$F^*(-\omega)$</td>
     <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
   </tr>
 
 <tr>
-
-<td data-th=" Propiedad ">$n$ Derivada</td>
-    <td data-th=" Expresión ">$\frac{d^n}{dt^n}f(t)$</td>
-    <td data-th=" Transformada">$(j\omega)^nF(\omega)$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
-enlace</button></td>
-  </tr>
- 
-<tr>
-
-<td data-th=" Propiedad ">Convolución en t</td>
-    <td data-th=" Expresión ">$f_1(t)*f_2(t)$</td>
-    <td data-th=" Transformada">$F_1(\omega)F_2(\omega)$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
-enlace</button></td>
-  </tr>
-
-<tr>
-
-<td data-th=" Propiedad ">Convolución en $\omega$</td>
-    <td data-th=" Expresión ">$f_1(t)f_2(t)$</td>
-    <td data-th=" Transformada">$\frac{1}{2\pi}F_1(\omega)*F_2(\omega)$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
-enlace</button></td>
-  </tr>
-
-
-<tr>
-
 <td data-th=" Propiedad ">Dualidad</td>
     <td data-th=" Expresión ">$F(t)$</td>
     <td data-th=" Transformada">$2\pi f(-\omega)$</td>
@@ -1835,7 +2053,38 @@ enlace</button></td>
   </tr>
 
 <tr>
+<td data-th=" Propiedad ">Derivada</td>
+    <td data-th=" Expresión ">$\frac{d}{dt}f(t)$</td>
+    <td data-th=" Transformada">$j\omega F(\omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
 
+<tr>
+<td data-th=" Propiedad ">$n$ Derivada</td>
+    <td data-th=" Expresión ">$\frac{d^n}{dt^n}f(t)$</td>
+    <td data-th=" Transformada">$(j\omega)^nF(\omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+ 
+<tr>
+<td data-th=" Propiedad ">Convolución en t</td>
+    <td data-th=" Expresión ">$f(t)*h(t)$</td>
+    <td data-th=" Transformada">$F(\omega)H(\omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+<tr>
+<td data-th=" Propiedad ">Convolución en $\omega$</td>
+    <td data-th=" Expresión ">$f(t)h(t)$</td>
+    <td data-th=" Transformada">$\frac{1}{2\pi}F(\omega)*H(\omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+<tr>
 <td data-th=" Propiedad ">Integral</td>
     <td data-th=" Expresión ">$\int_{-\infty}^{t}f(\tau) d\tau$</td>
     <td data-th=" Transformada">$\frac{F(\omega)}{j\omega}+\pi F(0)\delta(\omega)$</td>
@@ -1931,6 +2180,7 @@ enlace</button></td>
 <td data-th=" Espectro de fase "></td>
   </tr>
 
+    <!--
 <tr>
     <td data-th="#">7.</td>
     <td data-th=" Expresión ">$t^ne^{-at}cos(\omega_0 t)u(t)$</td>
@@ -1953,10 +2203,10 @@ enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
 <td data-th=" Espectro de fase "></td>
   </tr>
-
+-->
 
 <tr>
-   <td data-th="#">9.</td>
+   <td data-th="#">7.</td>
     <td data-th=" Expresión ">$sgn(t)$</td>
     <td data-th=" Transformada">$\frac{2}{j\omega}$</td>
     <td data-th="Condición"></td>
@@ -1968,7 +2218,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">10.</td>
+   <td data-th="#">8.</td>
     <td data-th=" Expresión ">$rect\left(\frac{t}{\tau}\right)$</td>
     <td data-th=" Transformada">$\tau sa\left(\frac{\omega\tau}{2}\right)$</td>
     <td data-th="Condición"></td>
@@ -1980,7 +2230,7 @@ enlace</button></td>
 
 
 <tr>
-    <td data-th="#">11.</td>
+    <td data-th="#">9.</td>
     <td data-th=" Expresión ">$\frac{A}{\pi}sa\left(At\right)$</td>
     <td data-th=" Transformada">$rect\left(\frac{\omega}{2A}\right)$</td>
     <td data-th="Condición"></td>
@@ -1992,7 +2242,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">12.</td>
+   <td data-th="#">10.</td>
     <td data-th=" Expresión ">$\Delta\left(\frac{t}{\tau}\right)$</td>
     <td data-th=" Transformada">$\frac{\tau}{2}sa^2\left(\frac{\omega \tau}{4}\right)$</td>
     <td data-th="Condición"></td>
@@ -2003,7 +2253,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-   <td data-th="#">13.</td>
+   <td data-th="#">11.</td>
     <td data-th=" Expresión ">$\frac{A}{2\pi}sa^2\left(\frac{At}{2}\right)$</td>
     <td data-th=" Transformada">$\Delta\left(\frac{\omega}{2A}\right)$</td>
     <td data-th="Condición"></td>
@@ -2014,7 +2264,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-   <td data-th="#">14.</td>
+   <td data-th="#">12.</td>
     <td data-th=" Expresión ">$e^{-t^2/2\sigma^2}$</td>
     <td data-th=" Transformada">$\sigma\sqrt{2\pi}e^{-\sigma^2\omega^2/2}$</td>
     <td data-th="Condición"></td>
@@ -2025,7 +2275,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-    <td data-th="#">15.</td>
+    <td data-th="#">13.</td>
     <td data-th=" Expresión ">$\delta (t)$</td>
     <td data-th=" Transformada">$1$</td>
     <td data-th="Condición"> </td>
@@ -2034,7 +2284,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-    <td data-th="#">16.</td>
+    <td data-th="#">14.</td>
     <td data-th=" Expresión ">$1$</td>
     <td data-th=" Transformada">$2\pi \delta (\omega)$</td>
     <td data-th="Condición"> </td>
@@ -2043,7 +2293,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-   <td data-th="#">17.</td>
+   <td data-th="#">15.</td>
     <td data-th=" Expresión ">$e^{\omega_0 j t}$</td>
     <td data-th=" Transformada">$2\pi \delta (\omega-\omega_0)$</td>
     <td data-th="Condición"> </td>
@@ -2053,7 +2303,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">18.</td>
+   <td data-th="#">16.</td>
     <td data-th=" Expresión ">$cos(\omega_0  t)$</td>
     <td data-th=" Transformada">$\pi\left\lbrace \delta (\omega-\omega_0)+\delta (\omega+\omega_0)\right\rbrace $</td>
     <td data-th="Condición"> </td>
@@ -2062,7 +2312,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-    <td data-th="#">19.</td>
+    <td data-th="#">17.</td>
     <td data-th=" Expresión ">$sen(\omega_0  t)$</td>
     <td data-th=" Transformada">$j\pi\left\lbrace \delta (\omega+\omega_0)-\delta (\omega-\omega_0)\right\rbrace $</td>
     <td data-th="Condición"> </td>
@@ -2073,7 +2323,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">20.</td>
+   <td data-th="#">18.</td>
     <td data-th=" Expresión ">$cos(\omega_0  t)u(t)$</td>
     <td data-th=" Transformada">$\frac{\pi}{2}\left\lbrace \delta (\omega-\omega_0)+\delta (\omega+\omega_0)\right\rbrace +\frac{j\omega}{\omega_0^2-\omega^2}$</td>
     <td data-th="Condición"> </td>
@@ -2083,7 +2333,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">21.</td>
+   <td data-th="#">19.</td>
     <td data-th=" Expresión ">$sen(\omega_0  t)u(t)$</td>
     <td data-th=" Transformada">$j\frac{\pi}{2}\left\lbrace \delta (\omega+\omega_0)-\delta (\omega-\omega_0)\right\rbrace +\frac{\omega_0}{\omega_0^2-\omega^2}$</td>
     <td data-th="Condición"> </td>
@@ -2093,7 +2343,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">22.</td>
+   <td data-th="#">20.</td>
     <td data-th=" Expresión ">$u(t)$</td>
     <td data-th=" Transformada">$\pi\delta(\omega)+\frac{1}{j\omega}$</td>
     <td data-th="Condición"> </td>
@@ -2102,7 +2352,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-    <td data-th="#">23.</td>
+    <td data-th="#">21.</td>
     <td data-th=" Expresión ">$\sum\limits_{n=-\infty}^{\infty}D_ne^{jn\omega_0 t}$</td>
     <td data-th=" Transformada">$2\pi\sum\limits_{n=-\infty}^{\infty}D_n\delta(\omega-n\omega_0),\;\omega_0=\frac{2\pi}{T_0}$</td>
     <td data-th="Condición"> </td>
@@ -2111,13 +2361,13 @@ enlace</button></td>
   </tr>
 
 <tr>
-    <td data-th="#">24.</td>
+    <td data-th="#">22.</td>
     <td data-th=" Expresión ">$\sum\limits_{n=-\infty}^{\infty}\delta(t-nT_0)$</td>
     <td data-th=" Transformada">$\omega_0\sum\limits_{n=-\infty}^{\infty}\delta(\omega-n\omega_0),\;\omega_0=\frac{2\pi}{T_0}$</td>
     <td data-th="Condición"> </td>
     <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
-  </tr>
+  
 
 </table>
 

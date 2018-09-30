@@ -282,16 +282,14 @@ enlace</button></td>
   </tr>
 
 <tr>
-
 <td data-th=" Propiedad ">Traslación en $\omega$</td>
-    <td data-th=" Expresión ">$f(t)e^{\omega_0 t}$</td>
+    <td data-th=" Expresión ">$f(t)e^{\omega_0 j t}$</td>
     <td data-th=" Transformada">$F(\omega-\omega_0)$</td>
     <td data-th="Prueba"><button class=" dmbutton youtube" id="lC0nyV9K89U?start=9&enablejsapi=1" title="...">
 enlace</button></td>
   </tr>
 
 <tr>
-
 <td data-th=" Propiedad ">Modulación de Amplitud</td>
     <td data-th=" Expresión ">$f(t)cos(\omega_0t)$</td>
     <td data-th=" Transformada">$\frac{1}{2}F(\omega-\omega_0)+\frac{1}{2}F(\omega+\omega_0)$</td>
@@ -307,47 +305,16 @@ enlace</button></td>
     <td data-th="Prueba"><button class=" dmbutton youtube" id="ujgIPF8lipg?start=9&enablejsapi=1" title="...">
 enlace</button></td>
   </tr>
-
-
+    
 <tr>
-
-<td data-th=" Propiedad ">Derivada</td>
-    <td data-th=" Expresión ">$\frac{d}{dt}f(t)$</td>
-    <td data-th=" Transformada">$j\omega F(\omega)$</td>
+<td data-th=" Propiedad ">Conjugación</td>
+    <td data-th=" Expresión ">$f^*(t)$</td>
+    <td data-th=" Transformada">$F^*(-\omega)$</td>
     <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
   </tr>
 
 <tr>
-
-<td data-th=" Propiedad ">$n$ Derivada</td>
-    <td data-th=" Expresión ">$\frac{d^n}{dt^n}f(t)$</td>
-    <td data-th=" Transformada">$(j\omega)^nF(\omega)$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
-enlace</button></td>
-  </tr>
- 
-<tr>
-
-<td data-th=" Propiedad ">Convolución en t</td>
-    <td data-th=" Expresión ">$f_1(t)*f_2(t)$</td>
-    <td data-th=" Transformada">$F_1(\omega)F_2(\omega)$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
-enlace</button></td>
-  </tr>
-
-<tr>
-
-<td data-th=" Propiedad ">Convolución en $\omega$</td>
-    <td data-th=" Expresión ">$f_1(t)f_2(t)$</td>
-    <td data-th=" Transformada">$\frac{1}{2\pi}F_1(\omega)*F_2(\omega)$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
-enlace</button></td>
-  </tr>
-
-
-<tr>
-
 <td data-th=" Propiedad ">Dualidad</td>
     <td data-th=" Expresión ">$F(t)$</td>
     <td data-th=" Transformada">$2\pi f(-\omega)$</td>
@@ -356,7 +323,38 @@ enlace</button></td>
   </tr>
 
 <tr>
+<td data-th=" Propiedad ">Derivada</td>
+    <td data-th=" Expresión ">$\frac{d}{dt}f(t)$</td>
+    <td data-th=" Transformada">$j\omega F(\omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
 
+<tr>
+<td data-th=" Propiedad ">$n$ Derivada</td>
+    <td data-th=" Expresión ">$\frac{d^n}{dt^n}f(t)$</td>
+    <td data-th=" Transformada">$(j\omega)^nF(\omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+ 
+<tr>
+<td data-th=" Propiedad ">Convolución en t</td>
+    <td data-th=" Expresión ">$f(t)*h(t)$</td>
+    <td data-th=" Transformada">$F(\omega)H(\omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+<tr>
+<td data-th=" Propiedad ">Convolución en $\omega$</td>
+    <td data-th=" Expresión ">$f(t)h(t)$</td>
+    <td data-th=" Transformada">$\frac{1}{2\pi}F(\omega)*H(\omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
+
+<tr>
 <td data-th=" Propiedad ">Integral</td>
     <td data-th=" Expresión ">$\int_{-\infty}^{t}f(\tau) d\tau$</td>
     <td data-th=" Transformada">$\frac{F(\omega)}{j\omega}+\pi F(0)\delta(\omega)$</td>
@@ -452,6 +450,7 @@ enlace</button></td>
 <td data-th=" Espectro de fase "></td>
   </tr>
 
+    <!--
 <tr>
     <td data-th="#">7.</td>
     <td data-th=" Expresión ">$t^ne^{-at}cos(\omega_0 t)u(t)$</td>
@@ -474,10 +473,10 @@ enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
 <td data-th=" Espectro de fase "></td>
   </tr>
-
+-->
 
 <tr>
-   <td data-th="#">9.</td>
+   <td data-th="#">7.</td>
     <td data-th=" Expresión ">$sgn(t)$</td>
     <td data-th=" Transformada">$\frac{2}{j\omega}$</td>
     <td data-th="Condición"></td>
@@ -489,7 +488,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">10.</td>
+   <td data-th="#">8.</td>
     <td data-th=" Expresión ">$rect\left(\frac{t}{\tau}\right)$</td>
     <td data-th=" Transformada">$\tau sa\left(\frac{\omega\tau}{2}\right)$</td>
     <td data-th="Condición"></td>
@@ -501,7 +500,7 @@ enlace</button></td>
 
 
 <tr>
-    <td data-th="#">11.</td>
+    <td data-th="#">9.</td>
     <td data-th=" Expresión ">$\frac{A}{\pi}sa\left(At\right)$</td>
     <td data-th=" Transformada">$rect\left(\frac{\omega}{2A}\right)$</td>
     <td data-th="Condición"></td>
@@ -513,7 +512,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">12.</td>
+   <td data-th="#">10.</td>
     <td data-th=" Expresión ">$\Delta\left(\frac{t}{\tau}\right)$</td>
     <td data-th=" Transformada">$\frac{\tau}{2}sa^2\left(\frac{\omega \tau}{4}\right)$</td>
     <td data-th="Condición"></td>
@@ -524,7 +523,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-   <td data-th="#">13.</td>
+   <td data-th="#">11.</td>
     <td data-th=" Expresión ">$\frac{A}{2\pi}sa^2\left(\frac{At}{2}\right)$</td>
     <td data-th=" Transformada">$\Delta\left(\frac{\omega}{2A}\right)$</td>
     <td data-th="Condición"></td>
@@ -535,7 +534,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-   <td data-th="#">14.</td>
+   <td data-th="#">12.</td>
     <td data-th=" Expresión ">$e^{-t^2/2\sigma^2}$</td>
     <td data-th=" Transformada">$\sigma\sqrt{2\pi}e^{-\sigma^2\omega^2/2}$</td>
     <td data-th="Condición"></td>
@@ -546,7 +545,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-    <td data-th="#">15.</td>
+    <td data-th="#">13.</td>
     <td data-th=" Expresión ">$\delta (t)$</td>
     <td data-th=" Transformada">$1$</td>
     <td data-th="Condición"> </td>
@@ -555,7 +554,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-    <td data-th="#">16.</td>
+    <td data-th="#">14.</td>
     <td data-th=" Expresión ">$1$</td>
     <td data-th=" Transformada">$2\pi \delta (\omega)$</td>
     <td data-th="Condición"> </td>
@@ -564,7 +563,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-   <td data-th="#">17.</td>
+   <td data-th="#">15.</td>
     <td data-th=" Expresión ">$e^{\omega_0 j t}$</td>
     <td data-th=" Transformada">$2\pi \delta (\omega-\omega_0)$</td>
     <td data-th="Condición"> </td>
@@ -574,7 +573,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">18.</td>
+   <td data-th="#">16.</td>
     <td data-th=" Expresión ">$cos(\omega_0  t)$</td>
     <td data-th=" Transformada">$\pi\left\lbrace \delta (\omega-\omega_0)+\delta (\omega+\omega_0)\right\rbrace $</td>
     <td data-th="Condición"> </td>
@@ -583,7 +582,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-    <td data-th="#">19.</td>
+    <td data-th="#">17.</td>
     <td data-th=" Expresión ">$sen(\omega_0  t)$</td>
     <td data-th=" Transformada">$j\pi\left\lbrace \delta (\omega+\omega_0)-\delta (\omega-\omega_0)\right\rbrace $</td>
     <td data-th="Condición"> </td>
@@ -594,7 +593,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">20.</td>
+   <td data-th="#">18.</td>
     <td data-th=" Expresión ">$cos(\omega_0  t)u(t)$</td>
     <td data-th=" Transformada">$\frac{\pi}{2}\left\lbrace \delta (\omega-\omega_0)+\delta (\omega+\omega_0)\right\rbrace +\frac{j\omega}{\omega_0^2-\omega^2}$</td>
     <td data-th="Condición"> </td>
@@ -604,7 +603,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">21.</td>
+   <td data-th="#">19.</td>
     <td data-th=" Expresión ">$sen(\omega_0  t)u(t)$</td>
     <td data-th=" Transformada">$j\frac{\pi}{2}\left\lbrace \delta (\omega+\omega_0)-\delta (\omega-\omega_0)\right\rbrace +\frac{\omega_0}{\omega_0^2-\omega^2}$</td>
     <td data-th="Condición"> </td>
@@ -614,7 +613,7 @@ enlace</button></td>
 
 
 <tr>
-   <td data-th="#">22.</td>
+   <td data-th="#">20.</td>
     <td data-th=" Expresión ">$u(t)$</td>
     <td data-th=" Transformada">$\pi\delta(\omega)+\frac{1}{j\omega}$</td>
     <td data-th="Condición"> </td>
@@ -623,7 +622,7 @@ enlace</button></td>
   </tr>
 
 <tr>
-    <td data-th="#">23.</td>
+    <td data-th="#">21.</td>
     <td data-th=" Expresión ">$\sum\limits_{n=-\infty}^{\infty}D_ne^{jn\omega_0 t}$</td>
     <td data-th=" Transformada">$2\pi\sum\limits_{n=-\infty}^{\infty}D_n\delta(\omega-n\omega_0),\;\omega_0=\frac{2\pi}{T_0}$</td>
     <td data-th="Condición"> </td>
@@ -632,13 +631,13 @@ enlace</button></td>
   </tr>
 
 <tr>
-    <td data-th="#">24.</td>
+    <td data-th="#">22.</td>
     <td data-th=" Expresión ">$\sum\limits_{n=-\infty}^{\infty}\delta(t-nT_0)$</td>
     <td data-th=" Transformada">$\omega_0\sum\limits_{n=-\infty}^{\infty}\delta(\omega-n\omega_0),\;\omega_0=\frac{2\pi}{T_0}$</td>
     <td data-th="Condición"> </td>
     <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
-  </tr>
+  
 
 </table>
 
