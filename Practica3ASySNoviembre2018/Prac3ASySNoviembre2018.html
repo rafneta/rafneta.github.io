@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Pr&aacute;ctica 3: Se&ntilde;ales en tiempo discreto</title><meta name="generator" content="MATLAB 9.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-11-07"><meta name="DC.source" content="Prac3ASySNoviembre2018.m"><style type="text/css">
+      --><title>Pr&aacute;ctica 3: Se&ntilde;ales en tiempo discreto</title><meta name="generator" content="MATLAB 9.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-11-09"><meta name="DC.source" content="Prac3ASySNoviembre2018.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -98,10 +98,7 @@ f2k = cos(17*pi/7*k);
 stem(k,f1k,<span class="string">'y'</span>,<span class="string">'LineWidth'</span>,3)
 stem(k,f2k,<span class="string">'b'</span>,<span class="string">'LineWidth'</span>,3)
 hold <span class="string">off</span>
-
-
-close <span class="string">all</span>
-</pre><h2 id="17">Entregables</h2><p>Se revisa una publicaci&oacute;n (html) de la pr&aacute;ctica. En este caso tendra que iniciar indicando el nombre de la pr&aacute;ctica y sus datos personales, equipos de dos o tres personas (Portada). El &iacute;ndice del contenido lo genera Publish (&iacute;ndice). Los objetivos son los sigueintes:</p><div><ul><li>Manipulaci&oacute;n b&aacute;sica de MATLAB</li><li>Gr&aacute;ficas de se&ntilde;ales reales y complejas discretas</li><li>Transformaci&oacute;n de se&ntilde;ales discretas (escalamientos y traslaciones)</li><li>Calculo de energ&iacute;a y potencia de se&ntilde;ales discretas</li></ul></div><p>Como introducci&oacute;n elabore un reporte sobre el escalamiento horizontal de se&ntilde;ales en tiempo discreto, desarrolle ejemplos.</p><p>Para el desarrollo se tienen que resolver cada uno de los siguientes problemas comenzando una nueva secci&oacute;n (para la publicaci&oacute;n) en cada uno de ellos.</p><div><ol><li>Crea una funci&oacute;n que se llame <i>fun1</i> y reciba dos parametros <img src="Prac3ASySNoviembre2018_eq01003107565813904020.png" alt="$\Omega$"> y <img src="Prac3ASySNoviembre2018_eq05508344529756732484.png" alt="$a$"> la funci&oacute;n debe regresar la evaluaci&oacute;n <img src="Prac3ASySNoviembre2018_eq01904929712048768728.png" alt="$X(\Omega)=(1-a^2)/(1-2acos(\Omega)+a^2)$">, esta funci&oacute;n debe trabajar con <img src="Prac3ASySNoviembre2018_eq16064389548595522758.png" alt="$a\in R$"> y <img src="Prac3ASySNoviembre2018_eq15936370034770299188.png" alt="$\Omega\in  R^n$">. Debe mostrar su c&oacute;digo en el reporte (sin ejecutar).</li><li>Construya una funci&oacute;n que gr&aacute;fique funciones de <img src="Prac3ASySNoviembre2018_eq12888934164539987532.png" alt="$f:N\rightarrow R$"> en el formato de su elecci&oacute;n y pruebe su c&oacute;digo mostrando la gr&aacute;fica de <img src="Prac3ASySNoviembre2018_eq09444074046691445379.png" alt="$X(\Omega)$"> vs <img src="Prac3ASySNoviembre2018_eq01003107565813904020.png" alt="$\Omega$"> en el intervalo <img src="Prac3ASySNoviembre2018_eq03772129782407176835.png" alt="$[-5\pi,5\pi]$"> para <img src="Prac3ASySNoviembre2018_eq13016372792947090052.png" alt="$a=1$">, no debe incluir el c&oacute;digo, solo el uso de la funci&oacute;n para mostrar la gr&aacute;fica</li><li>Construya una funci&oacute;n que gr&aacute;fique funciones de <img src="Prac3ASySNoviembre2018_eq16894167298513186129.png" alt="$f:N\rightarrow R^2$"> en el formato de su elecci&oacute;n y pruebe su c&oacute;digo mostrando la gr&aacute;fica de la transformada de Fourier discreta <img src="Prac3ASySNoviembre2018_eq09444074046691445379.png" alt="$X(\Omega)$"> en <img src="Prac3ASySNoviembre2018_eq01315095555081819470.png" alt="$[-10,10]$"> de la funci&oacute;n <img src="Prac3ASySNoviembre2018_eq14492615976455928922.png" alt="$x[n]=na^nu[n]$">, puede utilizar una funci&oacute;n anonima para este fin, no debe incluir el c&oacute;digo, solo el uso de la funci&oacute;n para mostrarla gr&aacute;fica. Reporte la gr&aacute;fica de <img src="Prac3ASySNoviembre2018_eq17924167568066421134.png" alt="$x[n]$"> de <img src="Prac3ASySNoviembre2018_eq15151265941271431510.png" alt="$[-5,10]$"> (recuerde que ya tiene una funci&oacute;n para esto). Reporte del espectro de magnitud y del espectro de fase en <img src="Prac3ASySNoviembre2018_eq01315095555081819470.png" alt="$[-10,10]$"> (puedes con sultar con help la descripci&oacute;n de <i>abs</i>, <i>angle</i>, <i>atan2</i>). Solo reporte las graficas.</li><li>Programe una funci&oacute;n que calcule la energ&iacute;a de un ase&ntilde;al en tiemp discreto la fucion se debe llamar <i>energiadis</i>. La funci&oacute;n recibe dos param&eacute;tros de entrada: el vector de tiempo y las alturas asignadas. La funci&oacute;n regresa la energia de la se&ntilde;al y despliega la gr&aacute;fica de la se&ntilde;al. Debe mostrar su c&oacute;digo en el reporte (sin ejecutar).</li><li>Resuelva el problema 3.1.1 c) de Lathi, aplicando su funci&oacute;n anterior</li><li>Resuelve el problema 3.2.3 de Lathi</li></ol></div><p>No es necesario incluir conclusiones en esta pr&aacute;ctica, si lo considera necesario puede incluir ap&eacute;ndices, no olvide incluir sus referencias.</p><p>El c&oacute;dico de esta publicaci&oacute;n lo puedes encontrar en el siguiente <a href="https://drive.google.com/file/d/1m_mOAo3z9W2X9_gBGY36OouQA1vSzE52/view?usp=sharing">enlace</a></p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018a</a><br></p></div><!--
+</pre><img vspace="5" hspace="5" src="Prac3ASySNoviembre2018_04.png" alt=""> <h2 id="17">Entregables</h2><p>Se revisa una publicaci&oacute;n (html) de la pr&aacute;ctica. En este caso tendra que iniciar indicando el nombre de la pr&aacute;ctica y sus datos personales, equipos de dos o tres personas (Portada). El &iacute;ndice del contenido lo genera Publish (&iacute;ndice). Los objetivos son los sigueintes:</p><div><ul><li>Manipulaci&oacute;n b&aacute;sica de MATLAB</li><li>Gr&aacute;ficas de se&ntilde;ales reales y complejas discretas</li><li>Transformaci&oacute;n de se&ntilde;ales discretas (escalamientos y traslaciones)</li><li>Calculo de energ&iacute;a y potencia de se&ntilde;ales discretas</li></ul></div><p>Como introducci&oacute;n elabore un reporte sobre el escalamiento horizontal de se&ntilde;ales en tiempo discreto, desarrolle ejemplos.</p><p>Para el desarrollo se tienen que resolver cada uno de los siguientes problemas comenzando una nueva secci&oacute;n (para la publicaci&oacute;n) en cada uno de ellos.</p><div><ol><li>Crea una funci&oacute;n que se llame <i>fun1</i> y reciba dos parametros <img src="Prac3ASySNoviembre2018_eq01003107565813904020.png" alt="$\Omega$"> y <img src="Prac3ASySNoviembre2018_eq05508344529756732484.png" alt="$a$"> la funci&oacute;n debe regresar la evaluaci&oacute;n <img src="Prac3ASySNoviembre2018_eq03646802660506946535.png" alt="$f[n]=r^ncos[\Omega n]+ r^nsen(\Omega n)j$">, esta funci&oacute;n debe trabajar con <img src="Prac3ASySNoviembre2018_eq02250910504099747793.png" alt="$r\in R^+$">, <img src="Prac3ASySNoviembre2018_eq16652459112341690445.png" alt="$\Omega\in R$"> y <img src="Prac3ASySNoviembre2018_eq13105139821992525800.png" alt="$n\in  N^n$">. Debe mostrar su c&oacute;digo en el reporte (sin ejecutar).</li><li>Construya una funci&oacute;n que gr&aacute;fique funciones de <img src="Prac3ASySNoviembre2018_eq12888934164539987532.png" alt="$f:N\rightarrow R$"> en el formato de su elecci&oacute;n y pruebe su c&oacute;digo mostrando la gr&aacute;fica de <img src="Prac3ASySNoviembre2018_eq14492615976455928922.png" alt="$x[n]=na^nu[n]$"> vs <img src="Prac3ASySNoviembre2018_eq08984225997457563733.png" alt="$n$"> para <img src="Prac3ASySNoviembre2018_eq08133761054732296635.png" alt="$n\in {-2,...,10}$"> para <img src="Prac3ASySNoviembre2018_eq00212765013998882747.png" alt="$a=0.9$">, no debe incluir el c&oacute;digo, solo el uso de la funci&oacute;n para mostrar la gr&aacute;fica, puede utilizar una funci&oacute;n anonima para este fin</li><li>Construya una funci&oacute;n que gr&aacute;fique funciones de <img src="Prac3ASySNoviembre2018_eq16894167298513186129.png" alt="$f:N\rightarrow R^2$"> en el formato de su elecci&oacute;n y pruebe su c&oacute;digo mostrando la gr&aacute;fica de la funci&oacute;n exponencial del primer problema, no debe incluir el c&oacute;digo, solo el uso de la funci&oacute;n para mostrarla gr&aacute;fica. Reporte la gr&aacute;fica de <img src="Prac3ASySNoviembre2018_eq08869918233192190351.png" alt="$f[n]$"> para <img src="Prac3ASySNoviembre2018_eq12706977765372392117.png" alt="$r=1.1$">, <img src="Prac3ASySNoviembre2018_eq03933324021199855378.png" alt="$\Omega=0.5$"> y <img src="Prac3ASySNoviembre2018_eq05063201140590064251.png" alt="$n\in{-2,...,20}$"> (recuerde que ya tiene una funci&oacute;n para esto). Reporte la gr&aacute;fica de <img src="Prac3ASySNoviembre2018_eq05380890773232186944.png" alt="$|f[n]|$"> vs <img src="Prac3ASySNoviembre2018_eq08984225997457563733.png" alt="$n$"> y <img src="Prac3ASySNoviembre2018_eq12048250087022819900.png" alt="$\angle f[n]$"> vs <img src="Prac3ASySNoviembre2018_eq08984225997457563733.png" alt="$n$">(puedes con sultar con help la descripci&oacute;n de <i>abs</i>, <i>angle</i>, <i>atan2</i>). Solo reporte las graficas.</li><li>Programe una funci&oacute;n que calcule la energ&iacute;a de una se&ntilde;al en tiemp discreto la fucion se debe llamar <i>energiadis</i>. La funci&oacute;n recibe dos param&eacute;tros de entrada: el vector de tiempo y las alturas asignadas. La funci&oacute;n regresa la energia de la se&ntilde;al y despliega la gr&aacute;fica de la se&ntilde;al. Debe mostrar su c&oacute;digo en el reporte (sin ejecutar).</li><li>Resuelva el problema 3.1.1 c) de Lathi, aplicando su funci&oacute;n anterior</li><li>Resuelve el problema 3.2.3 de Lathi</li></ol></div><p>No es necesario incluir conclusiones en esta pr&aacute;ctica, si lo considera necesario puede incluir ap&eacute;ndices, no olvide incluir sus referencias.</p><p>El c&oacute;dico de esta publicaci&oacute;n lo puedes encontrar en el siguiente <a href="https://drive.google.com/file/d/1m_mOAo3z9W2X9_gBGY36OouQA1vSzE52/view?usp=sharing">enlace</a></p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Práctica 3: Señales en tiempo discreto
 
@@ -220,9 +217,6 @@ stem(k,f1k,'y','LineWidth',3)
 stem(k,f2k,'b','LineWidth',3)
 hold off
 
-
-close all
-
 %% Entregables
 % Se revisa una publicación (html) de la práctica. En este caso tendra que
 % iniciar indicando el nombre de la práctica y sus datos personales,
@@ -242,25 +236,26 @@ close all
 % problemas comenzando una nueva sección (para la publicación) en cada uno de ellos.
 %
 % # Crea una función que se llame _fun1_ y reciba dos parametros $\Omega$ y 
-% $a$ la función debe regresar la evaluación $X(\Omega)=(1-a^2)/(1-2acos(\Omega)+a^2)$,
-% esta función debe trabajar con $a\in R$ y $\Omega\in  R^n$. Debe
+% $a$ la función debe regresar la evaluación $f[n]=r^ncos[\Omega n]+ r^nsen(\Omega n)j$,
+% esta función debe trabajar con $r\in R^+$, $\Omega\in R$ y $n\in  N^n$. Debe
 % mostrar su código en el reporte (sin ejecutar).
 % # Construya una función que gráfique funciones de
 % $f:N\rightarrow R$ en el formato de su elección y pruebe
-% su código mostrando la gráfica de $X(\Omega)$ vs $\Omega$ en el intervalo
-% $[-5\pi,5\pi]$ para $a=1$, no debe
-% incluir el código, solo el uso de la función para mostrar la gráfica
+% su código mostrando la gráfica de $x[n]=na^nu[n]$ vs $n$ para 
+% $n\in {-2,...,10}$ para $a=0.9$, no debe
+% incluir el código, solo el uso de la función para mostrar la gráfica, 
+% puede utilizar una función anonima para este fin
 % # Construya una función que gráfique funciones de
 % $f:N\rightarrow R^2$ en el formato de su elección y pruebe
-% su código mostrando la gráfica de la transformada de Fourier discreta $X(\Omega)$
-% en $[-10,10]$ de la función $x[n]=na^nu[n]$, puede utilizar una función
-% anonima para este fin, no debe incluir el código, solo el uso de la 
-% función para mostrarla gráfica. Reporte la gráfica de $x[n]$ de 
-% $[-5,10]$ (recuerde que ya tiene una función para esto). Reporte 
-% del espectro de magnitud y del espectro de fase en $[-10,10]$ (puedes con
+% su código mostrando la gráfica de la función exponencial del primer
+% problema,
+% no debe incluir el código, solo el uso de la 
+% función para mostrarla gráfica. Reporte la gráfica de $f[n]$ 
+% para $r=1.1$, $\Omega=0.5$ y $n\in{-2,...,20}$ (recuerde que ya tiene una función para esto).
+% Reporte la gráfica de $|f[n]|$ vs $n$ y $\angle f[n]$ vs $n$(puedes con
 % sultar con help la descripción de _abs_, _angle_, _atan2_). Solo
 % reporte las graficas.
-% # Programe una función que calcule la energía de un aseñal en tiemp discreto
+% # Programe una función que calcule la energía de una señal en tiemp discreto
 % la fucion se debe llamar _energiadis_.
 % La función recibe dos paramétros de entrada: el vector de tiempo y las
 % alturas asignadas. La función regresa la energia de la señal y despliega 
