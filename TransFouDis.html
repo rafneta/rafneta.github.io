@@ -101,8 +101,17 @@
     <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
   </tr>
-  <tr>
+  
+<tr>
+<td data-th=" Propiedad ">Conjugación</td>
+    <td data-th=" Expresión ">$x^*[n]$</td>
+    <td data-th=" Transformada">$X^*(-\Omega)$</td>
+    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+  </tr>
 
+    
+    <tr>
 <td data-th=" Propiedad ">Traslación en $n$</td>
     <td data-th=" Expresión ">$x[n-n_0]$</td>
     <td data-th=" Transformada">$X(\Omega)e^{-jn_0 \Omega}$</td>
@@ -113,7 +122,6 @@ enlace</button></td>
 
 
 <tr>
-
 <td data-th=" Propiedad ">Inversión en $n$</td>
     <td data-th=" Expresión ">$x[-n]$</td>
     <td data-th=" Transformada">$X(-\Omega)$</td>
@@ -150,14 +158,6 @@ enlace</button></td>
   </tr>
 
 <tr>
-<td data-th=" Propiedad ">Acumulación</td>
-    <td data-th=" Expresión ">$\sum\limits_{k=-\infty}^{n}x[k]$</td>
-    <td data-th=" Transformada">$\frac{1}{1-e^{-j\Omega}}X(\Omega)$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
-enlace</button></td>
-  </tr>
-
-<tr>
 <td data-th=" Propiedad ">Multiplicación por $n$</td>
     <td data-th=" Expresión ">$nx[n]$</td>
     <td data-th=" Transformada">$j\frac{d}{d\Omega}X(\Omega)$</td>
@@ -185,10 +185,10 @@ enlace</button></td>
     <th>$x[n]$</th>
     <th>$X(\Omega)=X(e^{j\Omega})$</th>
     <th>Condición</th>
-    <th>Prueba</th>
+ <!--   <th>Prueba</th>
 <th>Gráfica de $x[n]$</th>
 <th>Gráfica de $X(\Omega)$</th>
-<th>Espectro de Fourier</th>
+<th>Espectro de Fourier</th>-->
 
   </tr>
   <tr>
@@ -196,45 +196,45 @@ enlace</button></td>
     <td data-th=" Expresión ">$\delta [n]$</td>
     <td data-th=" Transformada">$1$</td>
     <td data-th="Condición"></td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="Xmp5JcYxVQA?start=9&enablejsapi=1" title="...">
+   <!-- <td data-th="Prueba"><button class=" dmbutton youtube" id="Xmp5JcYxVQA?start=9&enablejsapi=1" title="...">
 enlace</button></td>
 <td data-th=" Gráfica de la expresión"></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
  <tr>
     <td data-th="#">2.</td>
     <td data-th=" Expresión ">$a^nu[n]$</td>
     <td data-th=" Transformada">$\frac{e^{j\Omega}}{e^{j\Omega}-a}=\frac{1}{1-e^{-j\Omega}a}$</td>
-    <td data-th="Condición">$|a|<1$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+    <td data-th="Condición">$|a| < 1$</td>
+   <!-- <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
 <td data-th=" Gráfica de la expresión"></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
  
 <tr>
    <td data-th="#">3.</td>
     <td data-th=" Expresión ">$na^{n}u[n]$</td>
     <td data-th=" Transformada">$\frac{ae^{j\Omega}}{(e^{j\Omega}-a)^2}$</td>
-    <td data-th="Condición">$|a|<1$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+    <td data-th="Condición">$|a| <1 $</td>
+  <!--  <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
  <tr>
     <td data-th="#">4.</td>
     <td data-th=" Expresión ">$a^{|n|}$</td>
     <td data-th=" Transformada">$\frac{1-a^2}{1-2a\cos(\Omega)+a^2}$</td>
-    <td data-th="Condición">$|a|<1$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+    <td data-th="Condición">$|a| < 1$</td>
+  <!--  <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
  
@@ -244,22 +244,22 @@ enlace</button></td>
     <td data-th="#">5.</td>
     <td data-th=" Expresión ">$a^n\cos(\Omega_0n+\theta)u[n]$</td>
     <td data-th=" Transformada">$\frac{e^{j\Omega}[e^{j\Omega}\cos(\theta)-a\cos(\Omega_0-\theta)]}{e^{j2\Omega}-2a\cos(\Omega_0)e^{j\Omega} + a^2}$</td>
-    <td data-th="Condición">$|a|<1$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="Xmp5JcYxVQA?start=9&enablejsapi=1" title="...">
+    <td data-th="Condición">$|a| < 1$</td>
+  <!--  <td data-th="Prueba"><button class=" dmbutton youtube" id="Xmp5JcYxVQA?start=9&enablejsapi=1" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
  <tr>
     <td data-th="#">6.</td>
     <td data-th=" Expresión ">$-a^nu[-n+1]$</td>
     <td data-th=" Transformada">$\frac{e^{j\Omega}}{e^{j\omega}-a}$</td>
-    <td data-th="Condición">$|a|>1$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="Xmp5JcYxVQA?start=9&enablejsapi=1" title="...">
+    <td data-th="Condición">$|a| > 1$</td>
+ <!--   <td data-th="Prueba"><button class=" dmbutton youtube" id="Xmp5JcYxVQA?start=9&enablejsapi=1" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
 <tr>
@@ -267,10 +267,10 @@ enlace</button></td>
     <td data-th=" Expresión ">$u[n]-u[n-M]$</td>
     <td data-th=" Transformada">$\frac{sen(M\Omega/2)}{sin(\Omega/2)}e^{-j\Omega (M-1)/2}$</td>
     <td data-th="Condición"></td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+  <!--  <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
 
@@ -278,91 +278,116 @@ enlace</button></td>
     <td data-th="#">8.</td>
     <td data-th=" Expresión ">$\frac{\Omega_c}{\pi}Sa[\Omega_cn]$</td>
     <td data-th=" Transformada">$\sum\limits_{k=-\infty}^\infty rect\left(\frac{\Omega-2\pi k}{2\Omega_c}\right)$</td>
-    <td data-th="Condición">$\Omega_c<\pi$</td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+    <td data-th="Condición">$\Omega_c \leq \pi$</td>
+   <!-- <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
-
-<tr>
-   <td data-th="#">9.</td>
-    <td data-th=" Expresión ">$u[n]$</td>
-    <td data-th=" Transformada">$\frac{e^{j\Omega}}{e^{j\Omega}-1}+\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-2\pi k)$</td>
-    <td data-th="Condición"></td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+    <tr>
+    <td data-th="#">9.</td>
+    <td data-th=" Expresión ">$\frac{\Omega_c}{2\pi}Sa^2[\frac{\Omega_cn}{2}]$</td>
+    <td data-th=" Transformada">$\sum\limits_{k=-\infty}^\infty \triangle\left(\frac{\Omega-2\pi k}{2\Omega_c}\right)$</td>
+    <td data-th="Condición">$\Omega_c \geq \pi$</td>
+   <!-- <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
 
 <tr>
    <td data-th="#">10.</td>
+    <td data-th=" Expresión ">$u[n]$</td>
+    <td data-th=" Transformada">$\frac{e^{j\Omega}}{e^{j\Omega}-1}+\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-2\pi k)$</td>
+    <td data-th="Condición"></td>
+  <!--  <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>-->
+  </tr>
+
+
+<tr>
+   <td data-th="#">11.</td>
     <td data-th=" Expresión ">$1$</td>
     <td data-th=" Transformada">$2\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-2\pi k)$</td>
     <td data-th="Condición"></td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+   <!-- <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
 
 <tr>
-    <td data-th="#">11.</td>
+    <td data-th="#">12.</td>
     <td data-th=" Expresión ">$e^{j\Omega_0 n}$</td>
     <td data-th=" Transformada">$2\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)$</td>
     <td data-th="Condición"></td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+   <!-- <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
-
-<tr>
-   <td data-th="#">12.</td>
-    <td data-th=" Expresión ">$\cos(\Omega_0n)$</td>
-    <td data-th=" Transformada">$\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)+\delta(\Omega+\Omega_0-2\pi k)$</td>
-    <td data-th="Condición"></td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
-enlace</button></td>
-<td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
-  </tr>
 
 <tr>
    <td data-th="#">13.</td>
-    <td data-th=" Expresión ">$sen(\Omega_0 n)$</td>
-    <td data-th=" Transformada">$j\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega+\Omega_0-2\pi k)-\delta(\Omega-\Omega_0-2\pi k)$</td>
+    <td data-th=" Expresión ">$\cos(\Omega_0n)$</td>
+    <td data-th=" Transformada">$\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)+\delta(\Omega+\Omega_0-2\pi k)$</td>
     <td data-th="Condición"></td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+  <!--  <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
 <tr>
    <td data-th="#">14.</td>
-    <td data-th=" Expresión ">$cos(\Omega_0 n)u[n]$</td>
-    <td data-th=" Transformada">$\frac{e^{j2\Omega}-e{j\Omega}\cos(\Omega_0)}{e^{j2\Omega}-2e{j\Omega}\cos(\Omega_0)+1}+\frac{\pi}{2}\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)+\delta(\Omega+\Omega_0-2\pi k)$</td>
+    <td data-th=" Expresión ">$sen(\Omega_0 n)$</td>
+    <td data-th=" Transformada">$j\pi\sum\limits_{k=-\infty}^{\infty}\delta(\Omega+\Omega_0-2\pi k)-\delta(\Omega-\Omega_0-2\pi k)$</td>
     <td data-th="Condición"></td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+   <!-- <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
 <td data-th=" Espectro de magnitud"></td>
-<td data-th=" Espectro de fase "></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
 
 <tr>
-    <td data-th="#">15.</td>
-    <td data-th=" Expresión ">$sin(\Omega_0 n)u[n]$</td>
-    <td data-th=" Transformada">$\frac{e{j\Omega}sin(\Omega_0)}{e^{j2\Omega}-2e{j\Omega}\cos(\Omega_0)+1}+\frac{\pi}{2j}\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)-\delta(\Omega+\Omega_0-2\pi k)$</td>
-    <td data-th="Condición"> </td>
-    <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+   <td data-th="#">15.</td>
+    <td data-th=" Expresión ">$cos(\Omega_0 n)u[n]$</td>
+    <td data-th=" Transformada">$\frac{e^{j2\Omega}-e{j\Omega}\cos(\Omega_0)}{e^{j2\Omega}-2e{j\Omega}\cos(\Omega_0)+1}+$<br>
+        $\frac{\pi}{2}\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)+\delta(\Omega+\Omega_0-2\pi k)$</td>
+    <td data-th="Condición"></td>
+   <!-- <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
 enlace</button></td>
+<td data-th=" Espectro de magnitud"></td>
+<td data-th=" Espectro de fase "></td>-->
   </tr>
+
+<tr>
+    <td data-th="#">16.</td>
+    <td data-th=" Expresión ">$sin(\Omega_0 n)u[n]$</td>
+    <td data-th=" Transformada">$\frac{e{j\Omega}sin(\Omega_0)}{e^{j2\Omega}-2e{j\Omega}\cos(\Omega_0)+1}+$<br>
+        $\frac{\pi}{2j}\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-\Omega_0-2\pi k)-\delta(\Omega+\Omega_0-2\pi k)$</td>
+    <td data-th="Condición"> </td>
+   <!-- <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>-->
+  </tr>
+
+    <tr>
+    <td data-th="#">17.</td>
+    <td data-th=" Expresión ">$\sum\limits_{k=-\infty}^{n}x[k]$</td>
+    <td data-th=" Transformada">$\frac{1}{1-e^{-j\Omega}}X(\Omega)+$<br>
+        $\pi X(0)\sum\limits_{k=-\infty}^{\infty}\delta(\Omega-2\pi k)$</td>
+    <td data-th="Condición"> </td>
+  <!--  <td data-th="Prueba"><button class=" dmbutton youtube" id="" title="...">
+enlace</button></td>-->
+  </tr>
+
+   
 
 
 </table>
