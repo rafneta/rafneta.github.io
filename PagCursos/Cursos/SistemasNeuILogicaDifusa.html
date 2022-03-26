@@ -1,0 +1,354 @@
+c<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks!
+    -->
+
+    <!-- SEO -->
+    <title>Sistemas neurodifusos I: Lógica difusa para control automático</title>
+    <meta name="description" content="Criptografía I">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/permalink"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslidesmio.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/svg-icons.css">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="http://rafneta.github.io"> <!-- EDIT -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sistemas neurodifusos I: Lógica difusa para control automático "> <!-- EDIT -->
+    <meta property="og:description" content="Sistemas neurodifusos I"> <!-- EDIT -->
+    <meta property="og:updated_time" content="Sep/2019"> <!-- EDIT -->
+    <meta property="og:image" content="../static/images/share-webslides.jpg" > <!-- EDIT -->
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+    <meta name="twitter:title" content="Make a Keynote presentation using HTML"> <!-- EDIT -->
+    <meta name="twitter:description" content="WebSlides is the easiest way to make HTML presentations. 120+ free slides ready to use."> <!-- EDIT -->
+    <meta name="twitter:image" content="../static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="../static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="../static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="../static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="../static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="../static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="../static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+      
+<script type="text/x-mathjax-config">
+           MathJax.Hub.Config({
+        SVG: {
+    scale: 110
+  }});
+        MathJax.Hub.Queue(
+  function () {
+    $("#cubierta1").fadeOut(); 
+  }
+);
+</script>
+          
+
+        
+        <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+        
+        <script type="text/javascript" async
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>   
+  </head>
+    
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p class=""><a href="#slide=2" title="WebSlides">Contenido</a></p>
+        <ul>
+          <li class="github">
+            <a rel="external" href="https://github.com/rafneta" title="Github">
+              <svg class="fa-github">
+                <use xlink:href="#fa-github"></use>
+              </svg>
+              <em>rafael</em>
+            </a>
+          </li>
+          <li class="twitter">
+            <a rel="external" href="https://twitter.com/rauael" title="Twitter">
+              <svg class="fa-twitter">
+                <use xlink:href="#fa-twitter"></use>
+              </svg>
+              <em>@rauael</em>
+            </a>
+          </li>
+          <!--  <li class="dribbble"><a rel="external" href="http://dribbble.com/webslides" title="Dribbble"><svg class="fa-dribbble"><use xlink:href="#fa-dribbble"></use></svg> <em>webslides</em></a></li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      <article id="webslides">
+
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+        <section class="bg-primary .bg-gradient-h">
+        <span class="background blue" ></span>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+              <div class=".slide-top ">
+            <h1>Sistemas neurodifusos I: Lógica difusa para control automático</h1>
+              
+              <h3>Dr. Rafael Martínez Martínez</h3>
+              <p>
+              <br> Escuela de Ingeniería y Ciencias
+              <br>Departamento de Ciencias
+              <br>Estado de México
+              <br><strong>Tecnológico de Monterrey</strong>
+            </p>
+              <br>
+            
+          </div>
+              </div>
+              
+          <!-- .end .wrap -->
+
+        </section>
+
+        <section class="bg-secondary .bg-gradient-h">
+          <div class="wrap">
+            <div class=".slide-top ">
+              <h2>Descripción del curso</h2>
+            </div>
+            <p class="text">Curso de lógica difusa para control. Orientado para impartir MA2007B de la carreca de Ingeniería en Ciencias de datos y matemáticas</p>
+  
+          </div>
+          
+        </section>
+
+        <section class="bg-secondary .bg-gradient-h">
+          <div class="wrap">
+            <div class=".slide-top ">
+              <h2>Perfil de ingreso</h2>
+            </div>
+            <p class="text">Curso de lógica difusa para control. Orientado para impartir MA2007B de la carreca de Ingeniería en Ciencias de datos y matemáticas</p>
+  
+          </div>
+        </section>
+
+          <section class="bg-secondary .bg-gradient-h">
+            <div class="wrap">
+              <div class=".slide-top ">
+                <h2>Perfil de egreso</h2>
+              </div>
+              <p class="text">Curso de lógica difusa para control. Orientado para impartir MA2007B de la carreca de Ingeniería en Ciencias de datos y matemáticas</p>
+    
+            </div>
+            
+          </section>
+          
+        </section>
+
+        <section class="bg-secondary .bg-gradient-haligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h2>En desarrollo</h2>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        
+         <!-- INIICA COMENTATIO DE INTEGRAL Y LEBESGUE
+          
+          <section class="bg-secondary .bg-gradient-h">
+              <span class="background dark" ></span>
+          <div class="wrap size-50 ">
+          <h3>Contenido</h3>
+          <hr>
+            <div class="toc">
+                
+              <ol>
+                <li>
+                  <a href="#slide=4" title="Integral de Lebesgue">
+                  <span class="chapter">Integral de Lebesgue</span>
+                  <span class="toc-page">01</span></a>
+                    <ol>
+                    <li><a href="#" title="Go to Harmony"><span class="chapter">Definición de la integral</span>
+                      <span class="toc-page">12</span></a>
+                    </li>
+                    <li><a href="#" title="Go to Simplicity vs. Clarity"><span class="chapter">Teorema de la convergencia monónota</span>
+                      <span class="toc-page">14</span></a>
+                    </li>
+                    <li><a href="#" title="Go to Simplicity vs. Clarity"><span class="chapter">Funciones integrables</span>
+                      <span class="toc-page">14</span></a>
+                    </li>
+                     <li><a href="#" title="Go to Simplicity vs. Clarity"><span class="chapter">Teorema de la convergencia dominada</span>
+                      <span class="toc-page">14</span></a>
+                    </li>
+                     <li><a href="#" title="Go to Simplicity vs. Clarity"><span class="chapter">Aplicaciones</span>
+                      <span class="toc-page">14</span></a>
+                    </li>
+                  </ol>
+                </li>
+                  
+                <li><a href="#" title="Go to What is Design?"><span class="chapter">Descomposición de medidas</span>
+                  <span class="toc-page">04</span></a>
+                    <ol>
+                        <li><a href="#" title="Go to Harmony"><span class="chapter">Medidas signadas</span>
+                        <span class="toc-page">12</span></a>
+                        </li>
+                        <li><a href="#" title="Go to Harmony"><span class="chapter">Teorema de Lebesgue-Radon-Nikodim</span>
+                        <span class="toc-page">12</span></a>
+                        </li>
+                    </ol>
+                </li>
+                  
+                <li>
+                  <a href="#" title="Go to What is Beauty?"><span class="chapter">Tipos de convergencia</span>
+                  <span class="toc-page">08</span></a>
+                  <ol>
+                    <li><a href="#" title="Go to Harmony"><span class="chapter">Tipos de convergencia básicos</span>
+                      <span class="toc-page">12</span></a>
+                    </li>
+                    <li><a href="#" title="Go to Simplicity vs. Clarity"><span class="chapter">Convergencia en $L^p$</span>
+                      <span class="toc-page">14</span></a>
+                    </li>
+                    <li><a href="#" title="Go to Simplicity vs. Clarity"><span class="chapter">Convergencia en medida y convergencia casi uniforme</span>
+                      <span class="toc-page">14</span></a>
+                    </li>
+                    <li><a href="#" title="Go to Simplicity vs. Clarity"><span class="chapter">Convergencia en espacidos de medida finita</span>
+                      <span class="toc-page">14</span></a>
+                    </li>
+                    <li><a href="#" title="Go to Simplicity vs. Clarity"><span class="chapter">Intgrabilidad uniforme</span>
+                      <span class="toc-page">14</span></a>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="#" title="Go to Building a Culture"><span class="chapter">Referencias</span>
+                  <span class="toc-page">16</span></a>
+            </ol>
+            </div>
+              <!-- end .toc ->
+          </div>
+          <!-- .end .wrap ->
+        </section> 
+        
+          
+
+        <section class="bg-trans-light">
+        <span class="background dark" style="background-image:url('https://source.unsplash.com/5mZ_M06Fc9g')"></span>
+          <div class="wrap zoomIn" >
+            <h1> 1. Integral de Lebesgue</h1>
+              
+              
+              <div class="grid vertical-align">
+              
+                <div class="column">
+                <h2>
+                   
+                </h2>
+                <p class="text-intro">Por el momento se asumira que $(X,\mathcal{A},\mu)$ es un espacio de medida fijo </p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">
+                    Client:
+                    </span>
+                    Apple (2016)
+                  </li>
+                  <li>
+                    <span class="text-label">
+                    Services:
+                    </span>
+                    Web Design
+                  </li>
+                  <li>
+                    <span class="text-label">
+                    Website:
+                    </span>
+                    <a href="https://apple.com/iphone/">apple.com/iphone</a>
+                  </li>
+                </ul>
+                <div class="frame">
+            <h2 class=" aligncenter">Definición</h2>
+            <p class="text-subtitle">Función simple</p>
+            <p>Una función $f:X\rightarrow \mathbb{R}$ se llama simple si toma un número finito de valores</p>
+          $$f=\sum_{i=1}^n\alpha_i1_{A_i}$$
+              </div>
+                 
+                  <div class="frame">
+            <h2 class=" aligncenter">Definición</h2>
+            <p class="text-subtitle">Función simple</p>
+            <p>Una función $f:X\rightarrow \mathbb{R}$ se llama simple si toma un número finito de valores</p>
+          $$f=\sum_{i=1}^n\alpha_i1_{A_i}$$
+              </div>
+                 
+              </div>
+              <!-- end .column->
+              <div class="column">
+                 <div class="frame">
+            <h2 class=" aligncenter">Definición</h2>
+            <p class="text-subtitle">Función simple</p>
+            <p>Una función $f:X\rightarrow \mathbb{R}$ se llama simple si toma un número finito de valores</p>
+          $$f=\sum_{i=1}^n\alpha_i1_{A_i}$$
+              </div>
+                  
+              </div>
+              <!-- end .column ->
+            </div>
+            <!-- end .grid->
+          </div>
+          <!-- end .wrap->
+        </section>
+          AQUI TERMINA COMENTATIO DE CONTENIDO E INTEGRAL DE LEBESGUE--> 
+        
+
+      
+
+      </article>
+    </main>
+    <!--main-->
+
+    <!-- Required -->
+    <script src="../static/js/webslides.js"></script>
+
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="../static/js/svg-icons.js"></script>
+
+  </body>
+</html>
